@@ -7,21 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A392145993A00617924 /* CATransform3D+Helper.swift */; };
+		77414A3D2145993A00617924 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3A2145993A00617924 /* Degree.swift */; };
+		77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */; };
+		77414A442145996600617924 /* CritterAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A412145996500617924 /* CritterAnimatable.swift */; };
+		77414A452145996600617924 /* CritterAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A422145996600617924 /* CritterAssets.swift */; };
+		77414A462145996600617924 /* CritterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A432145996600617924 /* CritterView.swift */; };
+		77414A542145997200617924 /* RightEarMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A472145997000617924 /* RightEarMask.swift */; };
+		77414A552145997200617924 /* Mouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A482145997000617924 /* Mouth.swift */; };
+		77414A562145997200617924 /* LeftArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A492145997000617924 /* LeftArm.swift */; };
+		77414A572145997200617924 /* Head.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4A2145997100617924 /* Head.swift */; };
+		77414A582145997200617924 /* RightEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4B2145997100617924 /* RightEye.swift */; };
+		77414A592145997200617924 /* LeftEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4C2145997100617924 /* LeftEar.swift */; };
+		77414A5A2145997200617924 /* Muzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4D2145997100617924 /* Muzzle.swift */; };
+		77414A5B2145997200617924 /* RightArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4E2145997100617924 /* RightArm.swift */; };
+		77414A5C2145997200617924 /* LeftEarMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A4F2145997200617924 /* LeftEarMask.swift */; };
+		77414A5D2145997200617924 /* RightEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A502145997200617924 /* RightEar.swift */; };
+		77414A5E2145997200617924 /* LeftEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A512145997200617924 /* LeftEye.swift */; };
+		77414A5F2145997200617924 /* Nose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A522145997200617924 /* Nose.swift */; };
+		77414A602145997200617924 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A532145997200617924 /* Body.swift */; };
+		77414A622145998C00617924 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A612145998C00617924 /* LoginViewController.swift */; };
+		77414A692145B12A00617924 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A682145B12A00617924 /* AuthService.swift */; };
+		77414A6B2145B5E800617924 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A6A2145B5E800617924 /* HomeViewController.swift */; };
 		77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E72DDE2141F1BB0045A264 /* AppDelegate.swift */; };
-		77E72DE12141F1BB0045A264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E72DE02141F1BB0045A264 /* ViewController.swift */; };
 		77E72DE42141F1BB0045A264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE22141F1BB0045A264 /* Main.storyboard */; };
 		77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE52141F1BF0045A264 /* Assets.xcassets */; };
 		77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */; };
+		77E72DF12141F1EA0045A264 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */; };
+		DB7187ED1ACCFAEB7AE14EF5 /* Pods_ClerkieiOSChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClerkieiOSChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77414A392145993A00617924 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
+		77414A3A2145993A00617924 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+ColorPallete.swift"; sourceTree = "<group>"; };
+		77414A412145996500617924 /* CritterAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CritterAnimatable.swift; sourceTree = "<group>"; };
+		77414A422145996600617924 /* CritterAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CritterAssets.swift; sourceTree = "<group>"; };
+		77414A432145996600617924 /* CritterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CritterView.swift; sourceTree = "<group>"; };
+		77414A472145997000617924 /* RightEarMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightEarMask.swift; sourceTree = "<group>"; };
+		77414A482145997000617924 /* Mouth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mouth.swift; sourceTree = "<group>"; };
+		77414A492145997000617924 /* LeftArm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftArm.swift; sourceTree = "<group>"; };
+		77414A4A2145997100617924 /* Head.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Head.swift; sourceTree = "<group>"; };
+		77414A4B2145997100617924 /* RightEye.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightEye.swift; sourceTree = "<group>"; };
+		77414A4C2145997100617924 /* LeftEar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftEar.swift; sourceTree = "<group>"; };
+		77414A4D2145997100617924 /* Muzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muzzle.swift; sourceTree = "<group>"; };
+		77414A4E2145997100617924 /* RightArm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightArm.swift; sourceTree = "<group>"; };
+		77414A4F2145997200617924 /* LeftEarMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftEarMask.swift; sourceTree = "<group>"; };
+		77414A502145997200617924 /* RightEar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightEar.swift; sourceTree = "<group>"; };
+		77414A512145997200617924 /* LeftEye.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftEye.swift; sourceTree = "<group>"; };
+		77414A522145997200617924 /* Nose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nose.swift; sourceTree = "<group>"; };
+		77414A532145997200617924 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		77414A612145998C00617924 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		77414A682145B12A00617924 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		77414A6A2145B5E800617924 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77E72DDB2141F1BB0045A264 /* ClerkieiOSChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClerkieiOSChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E72DDE2141F1BB0045A264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77E72DE02141F1BB0045A264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77E72DE32141F1BB0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E72DE52141F1BF0045A264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E72DE82141F1BF0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E72DEA2141F1BF0045A264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClerkieiOSChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClerkieiOSChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +77,118 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7187ED1ACCFAEB7AE14EF5 /* Pods_ClerkieiOSChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF57D76A60DB3A30A058477 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77414A35214598EC00617924 /* LoginCritter */ = {
+			isa = PBXGroup;
+			children = (
+				77414A402145995000617924 /* CritterParts */,
+				77414A3F2145994600617924 /* Critter */,
+				77414A382145992E00617924 /* Helpers */,
+			);
+			path = LoginCritter;
+			sourceTree = "<group>";
+		};
+		77414A382145992E00617924 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				77414A392145993A00617924 /* CATransform3D+Helper.swift */,
+				77414A3A2145993A00617924 /* Degree.swift */,
+				77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		77414A3F2145994600617924 /* Critter */ = {
+			isa = PBXGroup;
+			children = (
+				77414A412145996500617924 /* CritterAnimatable.swift */,
+				77414A422145996600617924 /* CritterAssets.swift */,
+				77414A432145996600617924 /* CritterView.swift */,
+			);
+			path = Critter;
+			sourceTree = "<group>";
+		};
+		77414A402145995000617924 /* CritterParts */ = {
+			isa = PBXGroup;
+			children = (
+				77414A532145997200617924 /* Body.swift */,
+				77414A4A2145997100617924 /* Head.swift */,
+				77414A492145997000617924 /* LeftArm.swift */,
+				77414A4C2145997100617924 /* LeftEar.swift */,
+				77414A4F2145997200617924 /* LeftEarMask.swift */,
+				77414A512145997200617924 /* LeftEye.swift */,
+				77414A482145997000617924 /* Mouth.swift */,
+				77414A4D2145997100617924 /* Muzzle.swift */,
+				77414A522145997200617924 /* Nose.swift */,
+				77414A4E2145997100617924 /* RightArm.swift */,
+				77414A502145997200617924 /* RightEar.swift */,
+				77414A472145997000617924 /* RightEarMask.swift */,
+				77414A4B2145997100617924 /* RightEye.swift */,
+			);
+			path = CritterParts;
+			sourceTree = "<group>";
+		};
+		77414A6321459ACD00617924 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77414A612145998C00617924 /* LoginViewController.swift */,
+				77414A6A2145B5E800617924 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77414A6421459AD600617924 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77414A6521459ADC00617924 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77414A6621459AE400617924 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				77E72DDE2141F1BB0045A264 /* AppDelegate.swift */,
+				77E72DE52141F1BF0045A264 /* Assets.xcassets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		77414A672145B11400617924 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				77414A682145B12A00617924 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		77E72DD22141F1BB0045A264 = {
 			isa = PBXGroup;
 			children = (
 				77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */,
 				77E72DDC2141F1BB0045A264 /* Products */,
+				E082A33A6FD8CD0E94633268 /* Pods */,
+				2AF57D76A60DB3A30A058477 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +203,27 @@
 		77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				77E72DDE2141F1BB0045A264 /* AppDelegate.swift */,
-				77E72DE02141F1BB0045A264 /* ViewController.swift */,
+				77414A672145B11400617924 /* Services */,
+				77414A6621459AE400617924 /* Utilities */,
+				77414A6521459ADC00617924 /* Model */,
+				77414A6421459AD600617924 /* View */,
+				77414A6321459ACD00617924 /* Controller */,
+				77414A35214598EC00617924 /* LoginCritter */,
 				77E72DE22141F1BB0045A264 /* Main.storyboard */,
-				77E72DE52141F1BF0045A264 /* Assets.xcassets */,
 				77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */,
 				77E72DEA2141F1BF0045A264 /* Info.plist */,
+				77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */,
 			);
 			path = ClerkieiOSChallenge;
+			sourceTree = "<group>";
+		};
+		E082A33A6FD8CD0E94633268 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */,
+				85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "ClerkieiOSChallenge" */;
 			buildPhases = (
+				239FB14B25B3563B66723CAD /* [CP] Check Pods Manifest.lock */,
 				77E72DD72141F1BB0045A264 /* Sources */,
 				77E72DD82141F1BB0045A264 /* Frameworks */,
 				77E72DD92141F1BB0045A264 /* Resources */,
+				77ED18EE52207D90734928E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */,
+				77E72DF12141F1EA0045A264 /* GoogleService-Info.plist in Resources */,
 				77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */,
 				77E72DE42141F1BB0045A264 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +295,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		239FB14B25B3563B66723CAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClerkieiOSChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77ED18EE52207D90734928E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77E72DD72141F1BB0045A264 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E72DE12141F1BB0045A264 /* ViewController.swift in Sources */,
+				77414A452145996600617924 /* CritterAssets.swift in Sources */,
+				77414A442145996600617924 /* CritterAnimatable.swift in Sources */,
+				77414A5E2145997200617924 /* LeftEye.swift in Sources */,
+				77414A592145997200617924 /* LeftEar.swift in Sources */,
+				77414A5A2145997200617924 /* Muzzle.swift in Sources */,
+				77414A692145B12A00617924 /* AuthService.swift in Sources */,
+				77414A6B2145B5E800617924 /* HomeViewController.swift in Sources */,
+				77414A572145997200617924 /* Head.swift in Sources */,
 				77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */,
+				77414A5B2145997200617924 /* RightArm.swift in Sources */,
+				77414A462145996600617924 /* CritterView.swift in Sources */,
+				77414A622145998C00617924 /* LoginViewController.swift in Sources */,
+				77414A5F2145997200617924 /* Nose.swift in Sources */,
+				77414A582145997200617924 /* RightEye.swift in Sources */,
+				77414A5C2145997200617924 /* LeftEarMask.swift in Sources */,
+				77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */,
+				77414A542145997200617924 /* RightEarMask.swift in Sources */,
+				77414A602145997200617924 /* Body.swift in Sources */,
+				77414A562145997200617924 /* LeftArm.swift in Sources */,
+				77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */,
+				77414A5D2145997200617924 /* RightEar.swift in Sources */,
+				77414A3D2145993A00617924 /* Degree.swift in Sources */,
+				77414A552145997200617924 /* Mouth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +511,7 @@
 		};
 		77E72DEE2141F1BF0045A264 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +530,7 @@
 		};
 		77E72DEF2141F1BF0045A264 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
