@@ -78,6 +78,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setUpView()
         //signInButton.isEnabled = false
+        signInButton.layer.cornerRadius = 5
     }
 
     // MARK: - UITextFieldDelegate
@@ -223,8 +224,11 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func createTextField(text: String) -> UITextField {
+        let borderColor = #colorLiteral(red: 0.3450980392, green: 0.7333333333, blue: 0.7176470588, alpha: 1)
         let view = UITextField(frame: CGRect(x: 0, y: 0, width: textFieldWidth, height: textFieldHeight))
         view.backgroundColor = .white
+        view.layer.borderColor = borderColor.cgColor
+        view.layer.borderWidth = 1.0
         view.layer.cornerRadius = 4.07
         view.tintColor = .dark
         view.autocorrectionType = .no
@@ -288,69 +292,4 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         stopHeadRotation()
     }
 
-//    // MARK: - Debug Mode
-//
-//    private let isDebugMode = false
-//
-//    private lazy var dubug_activeAnimationSlider = UISlider()
-//
-//    private func debug_setUpDebugUI() {
-//        guard isDebugMode else { return }
-//
-//        let animateButton = UIButton(type: .system)
-//        animateButton.setTitle("Activate", for: .normal)
-//        animateButton.setTitleColor(.white, for: .normal)
-//        animateButton.addTarget(self, action: #selector(debug_activeAnimation), for: .touchUpInside)
-//
-//        let resetButton = UIButton(type: .system)
-//        resetButton.setTitle("Neutral", for: .normal)
-//        resetButton.setTitleColor(.white, for: .normal)
-//        resetButton.addTarget(self, action: #selector(debug_neutralAnimation), for: .touchUpInside)
-//
-//        let validateButton = UIButton(type: .system)
-//        validateButton.setTitle("Ecstatic", for: .normal)
-//        validateButton.setTitleColor(.white, for: .normal)
-//        validateButton.addTarget(self, action: #selector(debug_ecstaticAnimation), for: .touchUpInside)
-//
-//        dubug_activeAnimationSlider.tintColor = .light
-//        dubug_activeAnimationSlider.isEnabled = false
-//        dubug_activeAnimationSlider.addTarget(self, action: #selector(debug_activeAnimationSliderValueChanged(sender:)), for: .valueChanged)
-//
-//        let stackView = UIStackView(
-//            arrangedSubviews:
-//            [
-//                animateButton,
-//                resetButton,
-//                validateButton,
-//                dubug_activeAnimationSlider
-//            ]
-//        )
-//        stackView.axis = .vertical
-//        stackView.spacing = 5
-//        view.addSubview(stackView)
-//
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-//        stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-//        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -25).isActive = true
-//        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//    }
-//
-//    @objc private func debug_activeAnimation() {
-//        critterView.startHeadRotation(startAt: dubug_activeAnimationSlider.value)
-//        dubug_activeAnimationSlider.isEnabled = true
-//    }
-//
-//    @objc private func debug_neutralAnimation() {
-//        stopHeadRotation()
-//        dubug_activeAnimationSlider.isEnabled = false
-//    }
-//
-//    @objc private func debug_ecstaticAnimation() {
-//        critterView.isEcstatic = !critterView.isEcstatic
-//    }
-//
-//    @objc private func debug_activeAnimationSliderValueChanged(sender: UISlider) {
-//        critterView.updateHeadRotation(to: sender.value)
-//    }
 }

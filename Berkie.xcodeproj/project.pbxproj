@@ -61,7 +61,7 @@
 		77414A612145998C00617924 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77414A682145B12A00617924 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		77414A6A2145B5E800617924 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		77E72DDB2141F1BB0045A264 /* ClerkieiOSChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClerkieiOSChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E72DDB2141F1BB0045A264 /* Berkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E72DDE2141F1BB0045A264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E72DE32141F1BB0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E72DE52141F1BF0045A264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		77E72DDC2141F1BB0045A264 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77E72DDB2141F1BB0045A264 /* ClerkieiOSChallenge.app */,
+				77E72DDB2141F1BB0045A264 /* Berkie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77E72DDA2141F1BB0045A264 /* ClerkieiOSChallenge */ = {
+		77E72DDA2141F1BB0045A264 /* Berkie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "ClerkieiOSChallenge" */;
+			buildConfigurationList = 77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "Berkie" */;
 			buildPhases = (
 				239FB14B25B3563B66723CAD /* [CP] Check Pods Manifest.lock */,
 				77E72DD72141F1BB0045A264 /* Sources */,
@@ -243,9 +243,9 @@
 			);
 			dependencies = (
 			);
-			name = ClerkieiOSChallenge;
+			name = Berkie;
 			productName = ClerkieiOSChallenge;
-			productReference = 77E72DDB2141F1BB0045A264 /* ClerkieiOSChallenge.app */;
+			productReference = 77E72DDB2141F1BB0045A264 /* Berkie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77E72DD62141F1BB0045A264 /* Build configuration list for PBXProject "ClerkieiOSChallenge" */;
+			buildConfigurationList = 77E72DD62141F1BB0045A264 /* Build configuration list for PBXProject "Berkie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,7 +276,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77E72DDA2141F1BB0045A264 /* ClerkieiOSChallenge */,
+				77E72DDA2141F1BB0045A264 /* Berkie */,
 			);
 		};
 /* End PBXProject section */
@@ -550,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77E72DD62141F1BB0045A264 /* Build configuration list for PBXProject "ClerkieiOSChallenge" */ = {
+		77E72DD62141F1BB0045A264 /* Build configuration list for PBXProject "Berkie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77E72DEB2141F1BF0045A264 /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "ClerkieiOSChallenge" */ = {
+		77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "Berkie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77E72DEE2141F1BF0045A264 /* Debug */,
