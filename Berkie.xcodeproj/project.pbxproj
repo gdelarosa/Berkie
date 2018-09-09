@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64CECA4F2C4D5D5BEB18D97C /* Pods_Berkie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */; };
 		77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A392145993A00617924 /* CATransform3D+Helper.swift */; };
 		77414A3D2145993A00617924 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3A2145993A00617924 /* Degree.swift */; };
 		77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */; };
@@ -34,11 +35,11 @@
 		77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE52141F1BF0045A264 /* Assets.xcassets */; };
 		77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */; };
 		77E72DF12141F1EA0045A264 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */; };
-		DB7187ED1ACCFAEB7AE14EF5 /* Pods_ClerkieiOSChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClerkieiOSChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.release.xcconfig"; sourceTree = "<group>"; };
 		77414A392145993A00617924 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
 		77414A3A2145993A00617924 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+ColorPallete.swift"; sourceTree = "<group>"; };
@@ -68,8 +69,7 @@
 		77E72DE82141F1BF0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E72DEA2141F1BF0045A264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClerkieiOSChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClerkieiOSChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +77,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7187ED1ACCFAEB7AE14EF5 /* Pods_ClerkieiOSChallenge.framework in Frameworks */,
+				64CECA4F2C4D5D5BEB18D97C /* Pods_Berkie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AF57D76A60DB3A30A058477 /* Frameworks */ = {
+		70E47EB3DB88D9E632B2159A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				135E6244552DE17A5E5B31EC /* Pods_ClerkieiOSChallenge.framework */,
+				2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 			children = (
 				77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */,
 				77E72DDC2141F1BB0045A264 /* Products */,
-				E082A33A6FD8CD0E94633268 /* Pods */,
-				2AF57D76A60DB3A30A058477 /* Frameworks */,
+				CEC0C7FD4037A83CFA9DE472 /* Pods */,
+				70E47EB3DB88D9E632B2159A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,11 +217,11 @@
 			path = ClerkieiOSChallenge;
 			sourceTree = "<group>";
 		};
-		E082A33A6FD8CD0E94633268 /* Pods */ = {
+		CEC0C7FD4037A83CFA9DE472 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */,
-				85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */,
+				CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */,
+				4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -233,11 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E72DED2141F1BF0045A264 /* Build configuration list for PBXNativeTarget "Berkie" */;
 			buildPhases = (
-				239FB14B25B3563B66723CAD /* [CP] Check Pods Manifest.lock */,
+				537735B36F3842272F84DE7F /* [CP] Check Pods Manifest.lock */,
 				77E72DD72141F1BB0045A264 /* Sources */,
 				77E72DD82141F1BB0045A264 /* Frameworks */,
 				77E72DD92141F1BB0045A264 /* Resources */,
-				77ED18EE52207D90734928E6 /* [CP] Embed Pods Frameworks */,
+				BA8B6B3559524BFB3A23AFFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,7 +296,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		239FB14B25B3563B66723CAD /* [CP] Check Pods Manifest.lock */ = {
+		537735B36F3842272F84DE7F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,37 +307,45 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ClerkieiOSChallenge-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Berkie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77ED18EE52207D90734928E6 /* [CP] Embed Pods Frameworks */ = {
+		BA8B6B3559524BFB3A23AFFB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Berkie/Pods-Berkie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TKSubmitTransition/TKSubmitTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKSubmitTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClerkieiOSChallenge/Pods-ClerkieiOSChallenge-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Berkie/Pods-Berkie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -511,16 +519,13 @@
 		};
 		77E72DEE2141F1BF0045A264 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83CEAD028EB1C74C03F7414A /* Pods-ClerkieiOSChallenge.debug.xcconfig */;
+			baseConfigurationReference = CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
 				INFOPLIST_FILE = ClerkieiOSChallenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ginadlr.ClerkieiOSChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -530,16 +535,13 @@
 		};
 		77E72DEF2141F1BF0045A264 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85728A72C9290D3D3ABA737A /* Pods-ClerkieiOSChallenge.release.xcconfig */;
+			baseConfigurationReference = 4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
 				INFOPLIST_FILE = ClerkieiOSChallenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ginadlr.ClerkieiOSChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
