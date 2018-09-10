@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64CECA4F2C4D5D5BEB18D97C /* Pods_Berkie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */; };
+		77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */; };
 		77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A392145993A00617924 /* CATransform3D+Helper.swift */; };
 		77414A3D2145993A00617924 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3A2145993A00617924 /* Degree.swift */; };
 		77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.release.xcconfig"; sourceTree = "<group>"; };
+		77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		77414A392145993A00617924 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
 		77414A3A2145993A00617924 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+ColorPallete.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				77414A612145998C00617924 /* LoginViewController.swift */,
 				77414A6C214604CE00617924 /* SignUpViewController.swift */,
 				77414A6A2145B5E800617924 /* HomeViewController.swift */,
+				77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				77414A462145996600617924 /* CritterView.swift in Sources */,
 				77414A6F21464E0B00617924 /* Alerts.swift in Sources */,
 				77414A622145998C00617924 /* LoginViewController.swift in Sources */,
+				77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */,
 				77414A5F2145997200617924 /* Nose.swift in Sources */,
 				77414A582145997200617924 /* RightEye.swift in Sources */,
 				77414A5C2145997200617924 /* LeftEarMask.swift in Sources */,
