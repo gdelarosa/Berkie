@@ -80,7 +80,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
-        //signInButton.isEnabled = false
+       
         signUpButton.layer.masksToBounds = true
         signUpButton.layer.cornerRadius = signUpButton.frame.width/2
         signInButton.layer.cornerRadius = 5
@@ -149,7 +149,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         }
     }
 
-    @objc private func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         guard !critterView.isActiveStartAnimating, textField == emailTextField else { return }
 
         let fractionComplete = self.fractionComplete(for: textField)
@@ -158,9 +158,10 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         if let text = textField.text {
             critterView.isEcstatic = text.range(of: "@") != nil
         }
+        
     }
     
-    // MARK: - Sign In / Sign Up / Forgot Password
+    // MARK: - Sign In / Forgot Password
     
     @IBAction func signIn(_ sender: Any) {
         view.endEditing(true)
@@ -171,7 +172,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
            //self.performSegue(withIdentifier: "signInToHome", sender: nil)
         }, onError: { error in
            print("Error Signing In!")
-            let alertMessage = UIAlertController(title: "Invalid Email", message: "Please check the entered email address", preferredStyle: .alert)
+            let alertMessage = UIAlertController(title: "Invalid Credentials", message: "Please check your credentials. If you forgot your password you may reset it below.", preferredStyle: .alert)
             alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 alertMessage.dismiss(animated: true, completion: nil)
             }))
