@@ -15,6 +15,7 @@
 
 import UIKit
 import Firebase
+import BubbleTransition
 
 private let buttonFrame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
 private let buttonHeight = textFieldHeight
@@ -33,12 +34,14 @@ private let textFieldSpacing: CGFloat = 22
 private let textFieldTopMargin: CGFloat = 38.8
 private let textFieldWidth: CGFloat = 206
 
-final class LoginViewController: UIViewController, UITextFieldDelegate {
+final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
+    let transition = BubbleTransition()
+   
     private let critterView = CritterView(frame: critterViewFrame)
 
     private lazy var emailTextField: UITextField = {
@@ -78,7 +81,32 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setUpView()
         //signInButton.isEnabled = false
+        signUpButton.layer.masksToBounds = true
+        signUpButton.layer.cornerRadius = signUpButton.frame.width/2
         signInButton.layer.cornerRadius = 5
+    }
+    
+    // MARK: - Segue for Transition
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .custom
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = signUpButton.center
+        transition.bubbleColor = signUpButton.backgroundColor!
+        return transition
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = signUpButton.center
+        transition.bubbleColor = signUpButton.backgroundColor!
+        return transition
     }
 
     // MARK: - UITextFieldDelegate
