@@ -52,7 +52,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: Any) {
         AuthService.signUp(email: emailTextfield.text!, password: passwordTextfield.text!, onSuccess: {
-            print("Successful Sign up!")
+           
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
             self.present(controller!, animated: true, completion: nil)
             }, onError: { (errorString) in

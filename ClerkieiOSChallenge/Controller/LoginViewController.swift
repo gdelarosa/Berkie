@@ -166,22 +166,22 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     @IBAction func signIn(_ sender: Any) {
         view.endEditing(true)
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
-           print("Success signing in!")
+           
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
             self.present(controller!, animated: true, completion: nil)
         }, onError: { error in
-           print("Error Signing In!")
+          
             self.alert(message: "Please enter a valid email address or password", title: "Invalid Credentials")
         })
     }
     
     @IBAction func forgotPasswordReset(_ sender: Any) {
         AuthService.resetPassword(email: emailTextField.text!, onSuccess: {
-            print("Email sent to reset password!")
+            
             self.alert(message: "Check your email on how to reset password", title: "Password Reset")
             }, onError: { (error) in
                 self.alert(message: "Please enter valid email address", title: "Invalid Email")
-                print("Could not send email to reset password")
+                
             })
     }
     
