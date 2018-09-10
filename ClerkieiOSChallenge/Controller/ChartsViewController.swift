@@ -50,8 +50,9 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
       
         let title = "Charts Information"
         let message = "These charts will display data related to your financial health. Overtime you will see how you've been able to save, how you spend, and how you budget."
-        //let image = UIImage(named: "")
-        let popup = PopupDialog(title: title, message: message, image: nil)
+        let gifURL : String = "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/source.gif"
+        let image = UIImage.gifImageWithURL(gifURL)
+        let popup = PopupDialog(title: title, message: message, image: image)
     
         let buttonOne = CancelButton(title: "GREAT!") {
             print("Closed popup.")
