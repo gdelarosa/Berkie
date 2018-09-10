@@ -88,10 +88,13 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     
     // MARK: - Segue for Transition
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "signUpSegue") {
         let controller = segue.destination
         controller.transitioningDelegate = self
         controller.modalPresentationStyle = .custom
+      }
     }
+
     
     // MARK: UIViewControllerTransitioningDelegate
     
@@ -163,20 +166,20 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         view.endEditing(true)
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
            print("Success signing in!")
-            self.performSegue(withIdentifier: "signInToHome", sender: nil)
-                       
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+            self.present(controller!, animated: true, completion: nil)
+           //self.performSegue(withIdentifier: "signInToHome", sender: nil)
         }, onError: { error in
            print("Error Signing In!")
         })
     }
     
-    @IBAction func signUp(_ sender: Any) {
-        
-    }
-    
-    
     @IBAction func forgotPasswordReset(_ sender: Any) {
-        
+        AuthService.resetPassword(email: emailTextField.text!, onSuccess: {
+            print("Email sent to reset password!")
+            }, onError: { (error) in
+                print("Could not send email to reset password")
+                })
     }
     
     
@@ -198,8 +201,6 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         setUpGestures()
         setUpNotification()
         
-        //May not need debuger for coding challenge. Could delete
-        //debug_setUpDebugUI()
     }
 
     private func setUpCritterViewConstraints() {
@@ -226,9 +227,8 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: textFieldSpacing).isActive = true
     }
     
-    private func setUpSignInButtonConstraints() {
-        
-    }
+  
+    
 
     private func fractionComplete(for textField: UITextField) -> Float {
         guard let text = textField.text, let font = textField.font else { return 0 }

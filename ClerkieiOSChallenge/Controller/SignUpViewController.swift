@@ -11,28 +11,55 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var returnToLogin: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         returnToLogin.layer.masksToBounds = true
-        returnToLogin.layer.cornerRadius = returnToLogin.frame.width/2 
+        returnToLogin.layer.cornerRadius = returnToLogin.frame.width/2
         returnToLogin.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+        signUpButton.layer.cornerRadius = 5
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func handleTextField() {
+        emailTextfield.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextfield.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        
+    }
+    
+    @objc func textFieldDidChange() {
+        guard let email = emailTextfield.text, !email.isEmpty,
+            let password = passwordTextfield.text, !password.isEmpty else {
+                signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+                signUpButton.isEnabled = false
+                return
+        }
+        
+        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        signUpButton.isEnabled = true
     }
 
     @IBAction func closeAction(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
+    
+    @IBAction func signUpAction(_ sender: Any) {
+        AuthService.signUp(email: emailTextfield.text!, password: passwordTextfield.text!, onSuccess: {
+            print("Successful Sign up!")
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+            self.present(controller!, animated: true, completion: nil)
+           // self.performSegue(withIdentifier: "signupToHome", sender: nil)
+            }, onError: { (errorString) in
+                print("Could not sign up!")
+                })
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
-    
-
 
 }

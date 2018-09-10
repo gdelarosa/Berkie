@@ -24,33 +24,31 @@ class AuthService {
         
     }
     
-    static func signUp(username: String, email: String, password: String, onSuccess: @escaping () -> Void, onError:  @escaping (_ errorMessage: String?) -> Void) {
+    static func signUp(email: String, password: String, onSuccess: @escaping () -> Void, onError:  @escaping (_ errorMessage: String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
             if error != nil {
                 onError(error!.localizedDescription)
                 return
             }
+            onSuccess()
             
-            guard let result = user else {
-                return
-            }
-            let uid = result.user.uid
-            
-//            let storageRef = Storage.storage().reference(forURL: Config.STORAGE_ROOF_REF).child("profile_image").child(uid)
-//
-//            storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
-//                if error != nil {
-//                    return
-//                }
-            
-//                storageRef.downloadURL(completion: { (url, error) in
-//                    if let profileImageUrl = url?.absoluteString {
-//                        self.setUserInfomation(profileImageUrl: profileImageUrl, username: username, email: email, uid: uid, onSuccess: onSuccess)
-//                    }
-//                })
+//            guard let result = user else {
+//                return
+//            }
+//            _ = result.user.uid
            
         })
         
+    }
+    
+    static func resetPassword(email:String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
+            if error == nil {
+                print("An email with information on how to Reset your password has been sent.")
+            } else {
+                print(error!.localizedDescription)
+            }
+        })
     }
     
 //    static func forgotPasswordReset(email: String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
