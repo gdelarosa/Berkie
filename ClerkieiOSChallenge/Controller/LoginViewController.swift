@@ -169,31 +169,18 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
            print("Success signing in!")
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
             self.present(controller!, animated: true, completion: nil)
-           //self.performSegue(withIdentifier: "signInToHome", sender: nil)
         }, onError: { error in
            print("Error Signing In!")
-            let alertMessage = UIAlertController(title: "Invalid Credentials", message: "Please check your credentials. If you forgot your password you may reset it below.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                alertMessage.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alertMessage, animated: true, completion: nil)
+            self.alert(message: "Please enter a valid email address or password", title: "Invalid Credentials")
         })
     }
     
     @IBAction func forgotPasswordReset(_ sender: Any) {
         AuthService.resetPassword(email: emailTextField.text!, onSuccess: {
             print("Email sent to reset password!")
-            let alertMessage = UIAlertController(title: "Reset Password", message: "Please check your email to reset password", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                alertMessage.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alertMessage, animated: true, completion: nil)
+            self.alert(message: "Check your email on how to reset password", title: "Password Reset")
             }, onError: { (error) in
-                let alertMessage = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address", preferredStyle: .alert)
-                alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alertMessage.dismiss(animated: true, completion: nil)
-                }))
-                self.present(alertMessage, animated: true, completion: nil)
+                self.alert(message: "Please enter valid email address", title: "Invalid Email")
                 print("Could not send email to reset password")
             })
     }

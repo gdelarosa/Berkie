@@ -31,6 +31,7 @@
 		77414A692145B12A00617924 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A682145B12A00617924 /* AuthService.swift */; };
 		77414A6B2145B5E800617924 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A6A2145B5E800617924 /* HomeViewController.swift */; };
 		77414A6D214604CE00617924 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A6C214604CE00617924 /* SignUpViewController.swift */; };
+		77414A6F21464E0B00617924 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A6E21464E0B00617924 /* Alerts.swift */; };
 		77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E72DDE2141F1BB0045A264 /* AppDelegate.swift */; };
 		77E72DE42141F1BB0045A264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE22141F1BB0045A264 /* Main.storyboard */; };
 		77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE52141F1BF0045A264 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		77414A682145B12A00617924 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		77414A6A2145B5E800617924 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77414A6C214604CE00617924 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		77414A6E21464E0B00617924 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		77E72DDB2141F1BB0045A264 /* Berkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E72DDE2141F1BB0045A264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E72DE32141F1BB0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				77E72DDE2141F1BB0045A264 /* AppDelegate.swift */,
+				77414A6E21464E0B00617924 /* Alerts.swift */,
 				77E72DE52141F1BF0045A264 /* Assets.xcassets */,
 			);
 			path = Utilities;
@@ -369,6 +372,7 @@
 				77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */,
 				77414A5B2145997200617924 /* RightArm.swift in Sources */,
 				77414A462145996600617924 /* CritterView.swift in Sources */,
+				77414A6F21464E0B00617924 /* Alerts.swift in Sources */,
 				77414A622145998C00617924 /* LoginViewController.swift in Sources */,
 				77414A5F2145997200617924 /* Nose.swift in Sources */,
 				77414A582145997200617924 /* RightEye.swift in Sources */,

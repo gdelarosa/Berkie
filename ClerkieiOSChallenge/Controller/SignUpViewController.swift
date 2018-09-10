@@ -55,10 +55,9 @@ class SignUpViewController: UIViewController {
             print("Successful Sign up!")
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
             self.present(controller!, animated: true, completion: nil)
-           // self.performSegue(withIdentifier: "signupToHome", sender: nil)
             }, onError: { (errorString) in
-                print("Could not sign up!")
-                })
+               self.alert(message: "Please enter valid email address", title: "Invalid Email")
+            })
     }
     
 
