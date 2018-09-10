@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		64CECA4F2C4D5D5BEB18D97C /* Pods_Berkie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */; };
 		77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */; };
+		77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */; };
+		77365FB12146DF2000BD07EF /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */; };
+		77365FB32146DF2C00BD07EF /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */; };
+		77365FB52146DF3A00BD07EF /* DuoLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */; };
+		77365FB72146DF4500BD07EF /* PieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB62146DF4500BD07EF /* PieTableViewCell.swift */; };
 		77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A392145993A00617924 /* CATransform3D+Helper.swift */; };
 		77414A3D2145993A00617924 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3A2145993A00617924 /* Degree.swift */; };
 		77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */; };
@@ -44,6 +49,11 @@
 		2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.release.xcconfig"; sourceTree = "<group>"; };
 		77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTableViewCell.swift; sourceTree = "<group>"; };
+		77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
+		77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
+		77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoLineTableViewCell.swift; sourceTree = "<group>"; };
+		77365FB62146DF4500BD07EF /* PieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTableViewCell.swift; sourceTree = "<group>"; };
 		77414A392145993A00617924 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
 		77414A3A2145993A00617924 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+ColorPallete.swift"; sourceTree = "<group>"; };
@@ -73,8 +83,8 @@
 		77E72DE32141F1BB0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E72DE52141F1BF0045A264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E72DE82141F1BF0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		77E72DEA2141F1BF0045A264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77E72DEA2141F1BF0045A264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ClerkieiOSChallenge/Info.plist; sourceTree = "<group>"; };
+		77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ClerkieiOSChallenge/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +106,14 @@
 				2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77365FB82146DFDE00BD07EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				77414A35214598EC00617924 /* LoginCritter */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		77414A35214598EC00617924 /* LoginCritter */ = {
@@ -162,6 +180,11 @@
 		77414A6421459AD600617924 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */,
+				77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */,
+				77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */,
+				77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */,
+				77365FB62146DF4500BD07EF /* PieTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */,
+				77E72DEA2141F1BF0045A264 /* Info.plist */,
+				77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */,
 				77E72DDC2141F1BB0045A264 /* Products */,
 				CEC0C7FD4037A83CFA9DE472 /* Pods */,
 				70E47EB3DB88D9E632B2159A /* Frameworks */,
@@ -212,16 +237,14 @@
 		77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				77365FB82146DFDE00BD07EF /* Helpers */,
 				77414A672145B11400617924 /* Services */,
 				77414A6621459AE400617924 /* Utilities */,
 				77414A6521459ADC00617924 /* Model */,
 				77414A6421459AD600617924 /* View */,
 				77414A6321459ACD00617924 /* Controller */,
-				77414A35214598EC00617924 /* LoginCritter */,
 				77E72DE22141F1BB0045A264 /* Main.storyboard */,
 				77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */,
-				77E72DEA2141F1BF0045A264 /* Info.plist */,
-				77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */,
 			);
 			path = ClerkieiOSChallenge;
 			sourceTree = "<group>";
@@ -365,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77414A452145996600617924 /* CritterAssets.swift in Sources */,
+				77365FB12146DF2000BD07EF /* HorizontalTableViewCell.swift in Sources */,
 				77414A442145996600617924 /* CritterAnimatable.swift in Sources */,
 				77414A5E2145997200617924 /* LeftEye.swift in Sources */,
 				77414A592145997200617924 /* LeftEar.swift in Sources */,
@@ -373,12 +397,15 @@
 				77414A6B2145B5E800617924 /* HomeViewController.swift in Sources */,
 				77414A572145997200617924 /* Head.swift in Sources */,
 				77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */,
+				77365FB32146DF2C00BD07EF /* SingleLineTableViewCell.swift in Sources */,
 				77414A5B2145997200617924 /* RightArm.swift in Sources */,
 				77414A462145996600617924 /* CritterView.swift in Sources */,
+				77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */,
 				77414A6F21464E0B00617924 /* Alerts.swift in Sources */,
 				77414A622145998C00617924 /* LoginViewController.swift in Sources */,
 				77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */,
 				77414A5F2145997200617924 /* Nose.swift in Sources */,
+				77365FB52146DF3A00BD07EF /* DuoLineTableViewCell.swift in Sources */,
 				77414A582145997200617924 /* RightEye.swift in Sources */,
 				77414A5C2145997200617924 /* LeftEarMask.swift in Sources */,
 				77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */,
@@ -387,6 +414,7 @@
 				77414A6D214604CE00617924 /* SignUpViewController.swift in Sources */,
 				77414A562145997200617924 /* LeftArm.swift in Sources */,
 				77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */,
+				77365FB72146DF4500BD07EF /* PieTableViewCell.swift in Sources */,
 				77414A5D2145997200617924 /* RightEar.swift in Sources */,
 				77414A3D2145993A00617924 /* Degree.swift in Sources */,
 				77414A552145997200617924 /* Mouth.swift in Sources */,
