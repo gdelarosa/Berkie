@@ -17,12 +17,6 @@ class DuoLineTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     let moneySavedYearTwo = [280.0, 100.0, 500.0, 170.0, 108.0, 100.0, 600.0, 300.0, 150.0, 200.0, 200.0, 90.0]
     
@@ -47,18 +41,19 @@ class DuoLineTableViewCell: UITableViewCell {
         chartDataSet1.circleColors = [UIColor.lightGray]
         let chartData = LineChartData.init(dataSets: [chartDataSet, chartDataSet1])
         
-        //Settings for the chart view
-        let newGraph = LineChartView()
-        newGraph.frame = CGRect(x: 0, y: 0, width: duoLineView.bounds.width, height: duoLineView.bounds.height)
-        newGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
-        newGraph.xAxis.labelPosition = .bottom
-        newGraph.chartDescription?.text = ""
-        newGraph.rightAxis.enabled = false
-        newGraph.xAxis.drawGridLinesEnabled = false
-        newGraph.leftAxis.drawGridLinesEnabled = false
-        newGraph.data = chartData
+        //Axis setup
+        let duoLineGraph = LineChartView()
+        duoLineGraph.frame = CGRect(x: 0, y: 0, width: duoLineView.bounds.width, height: duoLineView.bounds.height)
+        duoLineGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        duoLineGraph.xAxis.labelPosition = .bottom
+        duoLineGraph.chartDescription?.text = ""
+        duoLineGraph.rightAxis.enabled = false
+        duoLineGraph.xAxis.drawGridLinesEnabled = false
+        duoLineGraph.leftAxis.drawGridLinesEnabled = false
+        duoLineGraph.leftAxis.drawLabelsEnabled = true 
+        duoLineGraph.data = chartData
         
-        duoLineView.addSubview(newGraph)
+        duoLineView.addSubview(duoLineGraph)
     }
 
 }

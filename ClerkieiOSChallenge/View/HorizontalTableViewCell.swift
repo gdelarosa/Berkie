@@ -17,41 +17,36 @@ class HorizontalTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func createChart() {
-        // Retrieve data
+        // Data point setup
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<months.count {
             let dataEntry = BarChartDataEntry.init(x: Double(i), y: Double(moneySavedOverMonths[i]))
             dataEntries.append(dataEntry)
         }
         
-        //Configure settings for the bar
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Money Saved")
+        //Configure
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "")
         chartDataSet.colors = [UIColor(red: 37/255, green: 68/255, blue: 65/255, alpha: 1), UIColor(red: 67/255, green: 170/255, blue: 139/255, alpha: 1)]
         chartDataSet.drawValuesEnabled = true
         chartDataSet.valueTextColor = UIColor.black
         chartDataSet.drawIconsEnabled = true
         let chartData = BarChartData(dataSet: chartDataSet)
         
-        //Settings for the chart view
-        let newGraph = HorizontalBarChartView()
-        newGraph.frame = CGRect(x: 0, y: 0, width: horizontalView.bounds.width, height: horizontalView.bounds.height)
-        newGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
-        newGraph.xAxis.labelPosition = .bottom
-        newGraph.chartDescription?.text = ""
-        newGraph.leftAxis.enabled = false
-        newGraph.xAxis.drawGridLinesEnabled = false
-        newGraph.rightAxis.drawGridLinesEnabled = false
-        newGraph.data = chartData
+        //Axis setup
+        let horizontalGraph = HorizontalBarChartView()
+        horizontalGraph.frame = CGRect(x: 0, y: 0, width: horizontalView.bounds.width, height: horizontalView.bounds.height)
+        horizontalGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        horizontalGraph.xAxis.labelPosition = .bottom
+        horizontalGraph.chartDescription?.text = "Money Earned"
+        horizontalGraph.leftAxis.enabled = true
+        horizontalGraph.xAxis.drawGridLinesEnabled = false
+        horizontalGraph.rightAxis.drawGridLinesEnabled = false
+        horizontalGraph.leftAxis.drawLabelsEnabled = true
+        horizontalGraph.data = chartData
         
-        horizontalView.addSubview(newGraph)
+        horizontalView.addSubview(horizontalGraph)
     }
 
 }

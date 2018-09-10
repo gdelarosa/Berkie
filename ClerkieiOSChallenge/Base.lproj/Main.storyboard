@@ -96,14 +96,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-PK-wFU">
                                         <rect key="frame" x="86" y="276" width="202" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC0-rv-D6V">
                                         <rect key="frame" x="131" y="336" width="113" height="30"/>
@@ -172,10 +172,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-Wu-inc">
-                                <rect key="frame" x="164" y="352" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-Wu-inc">
+                                <rect key="frame" x="326" y="42" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Chart-6"/>
                                 <connections>
                                     <segue destination="Pdd-0M-hpW" kind="show" id="YDi-qj-NkW"/>
                                 </connections>
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LJ-XT-6fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="116"/>
+            <point key="canvasLocation" x="888.79999999999995" y="101.19940029985008"/>
         </scene>
         <!--Charts View Controller-->
         <scene sceneID="Ohg-s5-J8a">
@@ -198,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-DU-G0W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="verticalCell" rowHeight="200" id="b4C-hm-4iT" userLabel="VerticalBar" customClass="VerticalTableViewCell" customModule="Berkie" customModuleProvider="target">
@@ -213,6 +213,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="verticalView" destination="7G2-uK-4af" id="4uc-Ze-G98"/>
@@ -226,11 +227,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-CC-Jxp">
-                                                    <rect key="frame" x="0.0" y="18" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="11" width="375" height="189"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="horizontalView" destination="Ore-CC-Jxp" id="YIa-j4-RzG"/>
                                         </connections>
@@ -248,6 +250,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="singleLineView" destination="Lqy-eW-B1l" id="VDD-Ei-BaL"/>
                                         </connections>
@@ -265,6 +268,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="duoLineView" destination="C3e-ak-SZb" id="DXj-EB-eSs"/>
                                         </connections>
@@ -273,7 +277,7 @@
                                         <rect key="frame" x="0.0" y="828" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7D-sL-R2z" id="JhW-tP-F0N">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VzX-tg-ruW">
@@ -282,6 +286,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="pieView" destination="VzX-tg-ruW" id="y2H-Vd-xNJ"/>
                                         </connections>
@@ -292,26 +297,66 @@
                                     <outlet property="delegate" destination="Pdd-0M-hpW" id="Dhw-pL-4gC"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-dd-bpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading_Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="s9r-SW-DHo">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EL8-Os-cmk">
+                                        <rect key="frame" x="25" y="38" width="13" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Arrow_Simple_left"/>
+                                        <connections>
+                                            <segue destination="wSf-ek-b5t" kind="show" id="m2I-NE-asm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4W-Rw-lZF">
+                                        <rect key="frame" x="335" y="35" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Security_questions"/>
+                                        <connections>
+                                            <action selector="infoButtonAction:" destination="Pdd-0M-hpW" eventType="touchUpInside" id="pcA-pQ-133"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="15V-fl-via"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="LM3-4E-H8t"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eOE-DU-G0W" firstAttribute="bottom" secondItem="TeM-Nl-xgN" secondAttribute="bottom" id="B3p-AY-2wS"/>
-                            <constraint firstItem="eOE-DU-G0W" firstAttribute="top" secondItem="MSE-1y-gc4" secondAttribute="top" id="Il7-1b-iu8"/>
-                            <constraint firstItem="eOE-DU-G0W" firstAttribute="leading" secondItem="TeM-Nl-xgN" secondAttribute="leading" id="Mds-Db-7fN"/>
-                            <constraint firstItem="eOE-DU-G0W" firstAttribute="trailing" secondItem="TeM-Nl-xgN" secondAttribute="trailing" id="mGm-3c-C3S"/>
+                            <constraint firstItem="eOE-DU-G0W" firstAttribute="top" secondItem="pzM-dd-bpQ" secondAttribute="bottom" constant="1" id="06F-KX-fcL"/>
+                            <constraint firstItem="eOE-DU-G0W" firstAttribute="bottom" secondItem="TeM-Nl-xgN" secondAttribute="bottom" id="FOc-zY-aXF"/>
+                            <constraint firstItem="pzM-dd-bpQ" firstAttribute="top" secondItem="MSE-1y-gc4" secondAttribute="top" id="PJu-Iy-Wjp"/>
+                            <constraint firstItem="pzM-dd-bpQ" firstAttribute="leading" secondItem="TeM-Nl-xgN" secondAttribute="leading" id="WJq-i8-QIW"/>
+                            <constraint firstItem="eOE-DU-G0W" firstAttribute="leading" secondItem="TeM-Nl-xgN" secondAttribute="leading" id="bNz-Kg-rH1"/>
+                            <constraint firstItem="pzM-dd-bpQ" firstAttribute="trailing" secondItem="TeM-Nl-xgN" secondAttribute="trailing" id="bRA-jK-fa8"/>
+                            <constraint firstItem="eOE-DU-G0W" firstAttribute="trailing" secondItem="TeM-Nl-xgN" secondAttribute="trailing" id="ipe-oF-JfK"/>
+                            <constraint firstItem="eOE-DU-G0W" firstAttribute="top" secondItem="pzM-dd-bpQ" secondAttribute="bottom" constant="1" id="tqE-6f-dM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TeM-Nl-xgN"/>
                     </view>
                     <connections>
                         <outlet property="chartsTableView" destination="eOE-DU-G0W" id="pS4-li-4U4"/>
+                        <outlet property="infoButton" destination="x4W-Rw-lZF" id="Ok4-bm-Hp8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN0-Hi-qsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637.5999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1637.5999999999999" y="114.69265367316342"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow_Simple_left" width="25" height="25"/>
+        <image name="Chart-6" width="25" height="25"/>
         <image name="Loading_Landscape" width="213" height="75"/>
+        <image name="Security_questions" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m2I-NE-asm"/>
+    </inferredMetricsTieBreakers>
 </document>

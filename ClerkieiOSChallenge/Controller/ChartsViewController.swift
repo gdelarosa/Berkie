@@ -17,6 +17,7 @@ let moneySavedOverMonths = [200.0, 180.0, 600.0, 100.0, 167.0, 180.0, 300.0, 320
 class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var chartsTableView: UITableView!
+    @IBOutlet weak var infoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,17 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidAppear(_ animated: Bool) {
         presentAnimation()
     }
+    
+    @IBAction func infoButtonAction(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.2,
+                         animations: {
+                            sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)},
+                         completion: { finish in
+                            UIButton.animate(withDuration: 0.2, animations: {
+                                sender.transform = CGAffineTransform.identity })
+        })
+    }
+    
     
     // MARK: - Animation
     
@@ -73,7 +85,7 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(200)
+        return CGFloat(250)
     }
 
   

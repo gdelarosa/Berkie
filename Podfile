@@ -5,9 +5,9 @@ use_frameworks!
 
 pod 'IQKeyboardManagerSwift'
 pod 'BubbleTransition', '~> 3.0.0'
-#pod 'TKSubmitTransition', :git => 'https://github.com/entotsu/TKSubmitTransition.git', :branch => 'swift4'
 pod 'Charts'
 pod 'ViewAnimator'
+pod 'PopupDialog', '~> 0.8'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'

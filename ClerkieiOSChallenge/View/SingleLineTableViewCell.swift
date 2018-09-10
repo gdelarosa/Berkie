@@ -16,15 +16,9 @@ class SingleLineTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func createChart() {
-        // Retrieve data
+        //Data point setup
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<months.count {
             let dataEntry = ChartDataEntry.init(x: Double(i), y: moneySavedOverMonths[i])
@@ -32,24 +26,25 @@ class SingleLineTableViewCell: UITableViewCell {
         }
         
         //Configure settings for the line
-        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Money Saved")
+        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Money Spent")
         chartDataSet.colors = [UIColor(red: 137/255, green: 4/255, blue: 61/255, alpha: 1)]
         chartDataSet.circleRadius = 2.0
         chartDataSet.circleColors = [UIColor.gray]
         let chartData = LineChartData(dataSet: chartDataSet)
         
-        //Settings for the chart view
-        let newGraph = LineChartView()
-        newGraph.frame = CGRect(x: 0, y: 0, width: singleLineView.bounds.width, height: singleLineView.bounds.height)
-        newGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
-        newGraph.xAxis.labelPosition = .bottom
-        newGraph.chartDescription?.text = ""
-        newGraph.rightAxis.enabled = false
-        newGraph.xAxis.drawGridLinesEnabled = false
-        newGraph.leftAxis.drawGridLinesEnabled = false
-        newGraph.data = chartData
+        //Axis setup
+        let singleLineGraph = LineChartView()
+        singleLineGraph.frame = CGRect(x: 0, y: 0, width: singleLineView.bounds.width, height: singleLineView.bounds.height)
+        singleLineGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        singleLineGraph.xAxis.labelPosition = .bottom
+        singleLineGraph.chartDescription?.text = ""
+        singleLineGraph.rightAxis.enabled = false
+        singleLineGraph.xAxis.drawGridLinesEnabled = false
+        singleLineGraph.leftAxis.drawGridLinesEnabled = false
+        singleLineGraph.leftAxis.drawLabelsEnabled = true 
+        singleLineGraph.data = chartData
         
-        singleLineView.addSubview(newGraph)
+        singleLineView.addSubview(singleLineGraph)
     }
 
 }
