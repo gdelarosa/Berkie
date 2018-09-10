@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import ViewAnimator
+import PopupDialog
 
 // MARK: - Charts Data Sets
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -22,20 +23,16 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         chartsTableView.alpha = 0 //work around for animation
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         presentAnimation()
     }
     
-    @IBAction func infoButtonAction(_ sender: UIButton) {
-        UIButton.animate(withDuration: 0.2,
-                         animations: {
-                            sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)},
-                         completion: { finish in
-                            UIButton.animate(withDuration: 0.2, animations: {
-                                sender.transform = CGAffineTransform.identity })
-        })
+    @IBAction func infoButtonAction(_ sender: Any) {
+        infoButton.animatedButton(self.infoButton)
+        presentInfoPopup()
     }
     
     
@@ -47,6 +44,22 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cells = chartsTableView.visibleCells
         UIView.animate(views: cells, animations: animation)
         print("Animation presented \(cells.count)")
+    }
+    
+    func presentInfoPopup() {
+      
+        let title = "Charts Information"
+        let message = "These charts will display data related to your financial health. Overtime you will see how you've been able to save, how you spend, and how you budget."
+        //let image = UIImage(named: "")
+        let popup = PopupDialog(title: title, message: message, image: nil)
+    
+        let buttonOne = CancelButton(title: "GREAT!") {
+            print("Closed popup.")
+        }
+   
+        popup.addButtons([buttonOne])
+        
+        self.present(popup, animated: true, completion: nil)
     }
     
     // MARK: - TableView Data Source

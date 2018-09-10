@@ -14,6 +14,7 @@
 		77365FB32146DF2C00BD07EF /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */; };
 		77365FB52146DF3A00BD07EF /* DuoLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */; };
 		77365FB72146DF4500BD07EF /* PieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB62146DF4500BD07EF /* PieTableViewCell.swift */; };
+		77365FBA2147335300BD07EF /* ButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB92147335300BD07EF /* ButtonAnimation.swift */; };
 		77414A3C2145993A00617924 /* CATransform3D+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A392145993A00617924 /* CATransform3D+Helper.swift */; };
 		77414A3D2145993A00617924 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3A2145993A00617924 /* Degree.swift */; };
 		77414A3E2145993A00617924 /* UIColors+ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */; };
@@ -54,6 +55,7 @@
 		77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
 		77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoLineTableViewCell.swift; sourceTree = "<group>"; };
 		77365FB62146DF4500BD07EF /* PieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieTableViewCell.swift; sourceTree = "<group>"; };
+		77365FB92147335300BD07EF /* ButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimation.swift; sourceTree = "<group>"; };
 		77414A392145993A00617924 /* CATransform3D+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Helper.swift"; sourceTree = "<group>"; };
 		77414A3A2145993A00617924 /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		77414A3B2145993A00617924 /* UIColors+ColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+ColorPallete.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				77E72DDE2141F1BB0045A264 /* AppDelegate.swift */,
 				77414A6E21464E0B00617924 /* Alerts.swift */,
+				77365FB92147335300BD07EF /* ButtonAnimation.swift */,
 				77E72DE52141F1BF0045A264 /* Assets.xcassets */,
 			);
 			path = Utilities;
@@ -401,6 +404,7 @@
 				77E72DDF2141F1BB0045A264 /* AppDelegate.swift in Sources */,
 				77365FB32146DF2C00BD07EF /* SingleLineTableViewCell.swift in Sources */,
 				77414A5B2145997200617924 /* RightArm.swift in Sources */,
+				77365FBA2147335300BD07EF /* ButtonAnimation.swift in Sources */,
 				77414A462145996600617924 /* CritterView.swift in Sources */,
 				77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */,
 				77414A6F21464E0B00617924 /* Alerts.swift in Sources */,
@@ -567,7 +571,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
 				INFOPLIST_FILE = ClerkieiOSChallenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ginadlr.ClerkieiOSChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -583,7 +590,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
 				INFOPLIST_FILE = ClerkieiOSChallenge/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ginadlr.ClerkieiOSChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
