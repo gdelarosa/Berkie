@@ -81,12 +81,6 @@ class DemoChatMessageFactory {
         let text = self.demoText[messageIndex]
         return makeTextMessage("3-\(index)", text: text, isIncoming: isIncoming)
     }
-    
-//    class func makePhotoMessage(_ uid: String, image: UIImage, size: CGSize, isIncoming: Bool) -> DemoPhotoMessageModel {
-//        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: PhotoMessageModel<MessageModel>.chatItemType)
-//        let photoMessageModel = DemoPhotoMessageModel(messageModel: messageModel, imageSize: size, image: image)
-//        return photoMessageModel
-//    }
 }
 
 extension TextMessageModel {

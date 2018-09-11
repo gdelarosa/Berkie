@@ -9,10 +9,13 @@
 import UIKit
 import Chatto
 import ChattoAdditions
+import RHSideButtons
+import PopupDialog
 
 class HomeViewController: BaseChatViewController {
     
     var currtxt = ""
+    var buttonsArray = [RHButtonView]()
     
     var messageSender = DemoChatMessageSender()
     let messagesSelector = BaseMessagesSelector()
@@ -22,14 +25,14 @@ class HomeViewController: BaseChatViewController {
         return BaseMessageHandler(messageSender: self.messageSender, messagesSelector: self.messagesSelector)
     }()
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarSetups()
-        
+        setupSideMenu() //testing for button
         self.view.backgroundColor = .white
       
         self.messagesSelector.delegate = self as MessagesSelectorDelegate
@@ -38,6 +41,53 @@ class HomeViewController: BaseChatViewController {
         self.messageSender = self.dataSource.messageSender
         self.chatDataSource = self.dataSource
         self.dataSource.addIntroMessage("Hello! Welcome to Berkie, the app for your financial success and well being. How do you feel about your finances at this moment?")
+    }
+    
+    // MARK: - Setup for side menu
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        castView().sideButtonsView?.reloadButtons()
+    }
+    
+    override func loadView() {
+        view = SideButtonView()
+    }
+    
+    func castView() -> SideButtonView {
+        return view as! SideButtonView
+    }
+    
+    fileprivate func setupSideMenu() {
+        addSideButtons()
+    }
+    
+    fileprivate func addSideButtons() {
+        
+        let triggerButton = RHTriggerButtonView(pressedImage: UIImage(named: "exit_icon")!) {
+            $0.image = UIImage(named: "trigger_img")
+            $0.hasShadow = true
+        }
+        
+        let sideButtonsView = RHSideButtons(parentView: castView(), triggerButton: triggerButton)
+        sideButtonsView.delegate = self
+        sideButtonsView.dataSource = self
+        
+        for index in 1...4 {
+            buttonsArray.append(generateButton(withImgName: "icon_\(index)"))
+        }
+        
+        castView().set(sideButtonsView: sideButtonsView)
+        castView().sideButtonsView?.reloadButtons()
+    }
+    
+    fileprivate func generateButton(withImgName imgName: String) -> RHButtonView {
+        
+        return RHButtonView {
+            $0.image = UIImage(named: imgName)
+            $0.hasShadow = true
+        }
     }
     
     // MARK: - Navigation Bar Setup
@@ -151,6 +201,7 @@ class HomeViewController: BaseChatViewController {
     
 }
 
+// MARK: - Extensions
 extension HomeViewController: MessagesSelectorDelegate {
     func messagesSelector(_ messagesSelector: MessagesSelectorProtocol, didSelectMessage: MessageModelProtocol) {
         self.enqueueModelUpdate(updateType: .normal)
@@ -158,6 +209,42 @@ extension HomeViewController: MessagesSelectorDelegate {
     
     func messagesSelector(_ messagesSelector: MessagesSelectorProtocol, didDeselectMessage: MessageModelProtocol) {
         self.enqueueModelUpdate(updateType: .normal)
+    }
+}
+
+extension HomeViewController: RHSideButtonsDataSource {
+    
+    func sideButtonsNumberOfButtons(_ sideButtons: RHSideButtons) -> Int {
+        return buttonsArray.count
+    }
+    
+    func sideButtons(_ sideButtons: RHSideButtons, buttonAtIndex index: Int) -> RHButtonView {
+        return buttonsArray[index]
+    }
+}
+
+extension HomeViewController: RHSideButtonsDelegate {
+    
+    func sideButtons(_ sideButtons: RHSideButtons, didSelectButtonAtIndex index: Int) {
+        
+        let title = "Your Money Your Rules"
+        let message = "We can help with transferring money, depositing checks, and borrowing money. Right now our settings indicate you do not have of these features setup. Please visit the settings within the app to get started."
+        let gifURL : String = "https://media.giphy.com/media/uFtywzELtkFzi/giphy.gif"
+        let image = UIImage.gifImageWithURL(gifURL)
+        let popup = PopupDialog(title: title, message: message, image: image)
+        
+        let buttonOne = CancelButton(title: "Sounds Great!") {
+            print("Closed popup.")
+        }
+        
+        popup.addButtons([buttonOne])
+        
+        self.present(popup, animated: true, completion: nil)
+        print("Button index tapped: \(index)")
+    }
+    
+    func sideButtons(_ sideButtons: RHSideButtons, didTriggerButtonChangeStateTo state: RHButtonState) {
+        print("Trigger button")
     }
 }
 
