@@ -4,7 +4,7 @@
 //
 //  Created by Gina De La Rosa on 9/9/18.
 //  Copyright © 2018 Gina De La Rosa. All rights reserved.
-//
+//  MARK: - Setup for signing in user, creating an account, and resetting password through Firebase
 
 import Foundation
 import FirebaseAuth

@@ -334,13 +334,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		77414A6521459ADC00617924 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		77414A6621459AE400617924 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,12 +377,11 @@
 		77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				77365FB82146DFDE00BD07EF /* Helpers */,
+				77414A6321459ACD00617924 /* Controller */,
+				77414A6421459AD600617924 /* View */,
 				77414A672145B11400617924 /* Services */,
 				77414A6621459AE400617924 /* Utilities */,
-				77414A6521459ADC00617924 /* Model */,
-				77414A6421459AD600617924 /* View */,
-				77414A6321459ACD00617924 /* Controller */,
+				77365FB82146DFDE00BD07EF /* Helpers */,
 				77E72DE22141F1BB0045A264 /* Main.storyboard */,
 				77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */,
 			);
