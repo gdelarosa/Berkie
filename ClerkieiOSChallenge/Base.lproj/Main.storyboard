@@ -87,28 +87,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j02-HM-Van">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j02-HM-Van">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-WY-yff">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-WY-yff">
                                         <rect key="frame" x="86" y="230" width="202" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-PK-wFU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-PK-wFU">
                                         <rect key="frame" x="86" y="276" width="202" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC0-rv-D6V">
-                                        <rect key="frame" x="131" y="336" width="113" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC0-rv-D6V">
+                                        <rect key="frame" x="131" y="384" width="113" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Sign Up">
@@ -118,30 +114,45 @@
                                             <action selector="signUpAction:" destination="3hc-JR-TFP" eventType="touchUpInside" id="DsH-sz-oTU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Berkie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulV-ae-ktD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Berkie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulV-ae-ktD">
                                         <rect key="frame" x="95" y="133" width="184" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                         <color key="textColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Life made easy..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5i-Y9-VYc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life made easy..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5i-Y9-VYc">
                                         <rect key="frame" x="130" y="169" width="114" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="0.98829299209999999" green="0.98812371489999995" blue="0.9921773076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading_Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-yp-u5q">
-                                        <rect key="frame" x="0.0" y="538" width="375" height="129"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading_Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="MlK-yp-u5q">
+                                        <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="trailing" secondItem="M5i-Y9-VYc" secondAttribute="trailing" id="29O-Z6-oAE"/>
+                                    <constraint firstAttribute="bottom" secondItem="OC0-rv-D6V" secondAttribute="bottom" constant="247" id="7ap-Wk-htW"/>
+                                    <constraint firstItem="uFF-WY-yff" firstAttribute="leading" secondItem="j02-HM-Van" secondAttribute="leading" constant="86" id="8FP-Wd-i8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="MlK-yp-u5q" secondAttribute="trailing" id="Ahv-7D-Bfc"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="MlK-yp-u5q" secondAttribute="centerX" id="Dvi-Cq-Uc4"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="top" secondItem="XSI-PK-wFU" secondAttribute="bottom" constant="78" id="INc-fa-XF1"/>
+                                    <constraint firstItem="MlK-yp-u5q" firstAttribute="leading" secondItem="j02-HM-Van" secondAttribute="leading" id="MUQ-yE-M8V"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="ulV-ae-ktD" secondAttribute="centerX" id="QE4-po-7uk"/>
+                                    <constraint firstItem="uFF-WY-yff" firstAttribute="leading" secondItem="XSI-PK-wFU" secondAttribute="leading" id="QOC-kr-CYc"/>
+                                    <constraint firstItem="XSI-PK-wFU" firstAttribute="top" secondItem="uFF-WY-yff" secondAttribute="bottom" constant="16" id="X62-GR-CKv"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="XSI-PK-wFU" secondAttribute="centerX" id="fjF-5B-WZD"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="uFF-WY-yff" secondAttribute="centerX" id="mhc-W8-aaI"/>
+                                    <constraint firstItem="uFF-WY-yff" firstAttribute="top" secondItem="M5i-Y9-VYc" secondAttribute="bottom" constant="41" id="oWE-cY-JqF"/>
+                                    <constraint firstAttribute="bottom" secondItem="MlK-yp-u5q" secondAttribute="bottom" id="opd-ld-5i4"/>
+                                    <constraint firstItem="M5i-Y9-VYc" firstAttribute="top" secondItem="ulV-ae-ktD" secondAttribute="bottom" constant="8" symbolic="YES" id="pfj-LS-FWG"/>
+                                    <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="M5i-Y9-VYc" secondAttribute="centerX" id="wcC-TR-Ce2"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0R-5A-gte">
                                 <rect key="frame" x="324" y="61" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -152,6 +163,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="bottom" secondItem="Tny-ZD-v9g" secondAttribute="bottom" id="7jV-xc-uOu"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="trailing" secondItem="Tny-ZD-v9g" secondAttribute="trailing" id="jkO-TM-GJu"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="leading" secondItem="Tny-ZD-v9g" secondAttribute="leading" id="mPw-fA-2h5"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="top" secondItem="Bp1-Xs-BE7" secondAttribute="top" id="tn0-BF-6Qq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Tny-ZD-v9g"/>
                     </view>
                     <connections>
@@ -176,9 +193,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17w-i8-3FH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading_Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="XFk-gw-HJ2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading_Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="XFk-gw-HJ2">
                                         <rect key="frame" x="0.0" y="20" width="375" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-Wu-inc">
                                         <rect key="frame" x="331" y="42" width="25" height="25"/>
@@ -190,7 +206,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VBv-Wu-inc" firstAttribute="top" secondItem="L0G-Fs-Ych" secondAttribute="top" constant="22" id="3E8-JK-9rU"/>
+                                    <constraint firstItem="XFk-gw-HJ2" firstAttribute="leading" secondItem="17w-i8-3FH" secondAttribute="leading" id="90z-Gz-ZJY"/>
+                                    <constraint firstItem="XFk-gw-HJ2" firstAttribute="bottom" secondItem="L0G-Fs-Ych" secondAttribute="bottom" id="PCj-Hz-qBK"/>
                                     <constraint firstItem="L0G-Fs-Ych" firstAttribute="trailing" secondItem="VBv-Wu-inc" secondAttribute="trailing" constant="19" id="VPp-va-dsq"/>
+                                    <constraint firstItem="XFk-gw-HJ2" firstAttribute="centerX" secondItem="17w-i8-3FH" secondAttribute="centerX" id="WF2-LG-05K"/>
+                                    <constraint firstItem="XFk-gw-HJ2" firstAttribute="top" secondItem="L0G-Fs-Ych" secondAttribute="top" id="mJb-aG-j0b"/>
+                                    <constraint firstAttribute="trailing" secondItem="XFk-gw-HJ2" secondAttribute="trailing" id="pWJ-aF-p2e"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="L0G-Fs-Ych"/>
                             </view>
@@ -207,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LJ-XT-6fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="101.19940029985008"/>
+            <point key="canvasLocation" x="849" y="116"/>
         </scene>
         <!--Charts View Controller-->
         <scene sceneID="Ohg-s5-J8a">
@@ -328,13 +349,10 @@
                                         <rect key="frame" x="25" y="38" width="13" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Arrow_Simple_left"/>
-                                        <connections>
-                                            <segue destination="wSf-ek-b5t" kind="show" id="m2I-NE-asm"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4W-Rw-lZF">
                                         <rect key="frame" x="335" y="35" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Security_questions"/>
                                         <connections>
                                             <action selector="infoButtonAction:" destination="Pdd-0M-hpW" eventType="touchUpInside" id="pcA-pQ-133"/>
@@ -367,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN0-Hi-qsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="101"/>
+            <point key="canvasLocation" x="1673" y="116"/>
         </scene>
     </scenes>
     <resources>
@@ -376,7 +394,4 @@
         <image name="Loading_Landscape" width="213" height="75"/>
         <image name="Security_questions" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="YDi-qj-NkW"/>
-    </inferredMetricsTieBreakers>
 </document>

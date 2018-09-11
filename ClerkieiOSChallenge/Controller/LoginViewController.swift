@@ -88,13 +88,14 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     
     // MARK: - Segue for Transition
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if (segue.identifier == "signUpSegue") {
         let controller = segue.destination
         controller.transitioningDelegate = self
         controller.modalPresentationStyle = .custom
       }
-    }
 
+    }
     
     // MARK: UIViewControllerTransitioningDelegate
     
@@ -185,7 +186,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
             })
     }
     
-    
+    // MARK: -
     
     // MARK: - Private
 
@@ -230,9 +231,6 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: textFieldSpacing).isActive = true
     }
     
-  
-    
-
     private func fractionComplete(for textField: UITextField) -> Float {
         guard let text = textField.text, let font = textField.font else { return 0 }
         let textFieldWidth = textField.bounds.width - (2 * textFieldHorizontalMargin)
