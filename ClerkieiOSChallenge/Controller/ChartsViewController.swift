@@ -4,7 +4,8 @@
 //
 //  Created by Gina De La Rosa on 9/10/18.
 //  Copyright © 2018 Gina De La Rosa. All rights reserved.
-//  This view controller will display five chartss
+//  MARK: - This view controller will display five charts with subtle animations
+//  Resource: https://www.appcoda.com/ios-charts-api-tutorial/
 
 import UIKit
 import Charts

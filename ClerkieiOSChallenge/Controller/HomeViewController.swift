@@ -7,6 +7,7 @@
 //  MARK: - This is the home view controller after the user logs in. Will be able to chat here.
 
 import UIKit
+import Chatto
 
 class HomeViewController: UIViewController {
 
