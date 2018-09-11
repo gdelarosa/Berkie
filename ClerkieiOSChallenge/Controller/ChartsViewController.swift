@@ -11,7 +11,7 @@ import Charts
 import ViewAnimator
 import PopupDialog
 
-// MARK: - Charts Data Sets
+// MARK: - Charts Data Set
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 let moneySavedOverMonths = [200.0, 180.0, 600.0, 100.0, 167.0, 180.0, 300.0, 320.0, 185.0, 260.0, 140.0, 70.0]
 
@@ -22,7 +22,7 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chartsTableView.alpha = 0 //work around for animation
+        chartsTableView.alpha = 0
         
     }
     
@@ -40,15 +40,14 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func presentAnimation() {
         chartsTableView.alpha = 1
-        let animation = [AnimationType.from(direction: .top, offset: 30.0)]
+        let rotateAnimation = [AnimationType.rotate(angle: CGFloat.pi/6)]
         let cells = chartsTableView.visibleCells
-        UIView.animate(views: cells, animations: animation)
-        print("Animation presented \(cells.count)")
+        UIView.animate(views: cells, animations: rotateAnimation)
     }
     
     func presentInfoPopup() {
       
-        let title = "Charts Information"
+        let title = "Analytics Dashboard"
         let message = "These charts will display data related to your financial health. Overtime you will see how you've been able to save, how you spend, and how you budget."
         let gifURL : String = "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/source.gif"
         let image = UIImage.gifImageWithURL(gifURL)

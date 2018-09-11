@@ -261,7 +261,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         view.layer.borderColor = borderColor.cgColor
         view.layer.borderWidth = 1.0
         view.layer.cornerRadius = 4.07
-        view.tintColor = .dark
+        view.tintColor = .black
         view.autocorrectionType = .no
         view.autocapitalizationType = .none
         view.spellCheckingType = .no
@@ -275,7 +275,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         view.rightView = UIView(frame: frame)
         view.rightViewMode = .always
 
-        view.font = UIFont(name: "HelveticaNeue-Medium", size: 15)
+        view.font = UIFont(name: "Avenir-Next-Regular", size: 15)
         view.textColor = .text
 
         let attributes: [NSAttributedStringKey : Any] = [
