@@ -13,7 +13,6 @@ import ChattoAdditions
 class HomeViewController: BaseChatViewController {
     
     var currtxt = ""
-    var whatIsUp = "what's up?"
     
     var messageSender = DemoChatMessageSender()
     let messagesSelector = BaseMessagesSelector()
@@ -29,7 +28,8 @@ class HomeViewController: BaseChatViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        navBarSetups()
+        
         self.view.backgroundColor = .white
       
         self.messagesSelector.delegate = self as MessagesSelectorDelegate
@@ -39,6 +39,24 @@ class HomeViewController: BaseChatViewController {
         self.chatDataSource = self.dataSource
         self.dataSource.addIntroMessage("Hello! Welcome to Berkie, the app for your financial success and well being. How do you feel about your finances at this moment?")
     }
+    
+    // MARK: - Navigation Bar Setup
+    func navBarSetups() {
+        navBarSetup()
+        
+        // Right Bar Button
+        let graphsButton = UIBarButtonItem(image: UIImage(named: "Chart-6"), style: .plain, target: self, action: #selector(goToGraphsAction))
+        self.navigationItem.rightBarButtonItem  = graphsButton
+        graphsButton.tintColor = UIColor.black
+ 
+    }
+    
+    @objc func goToGraphsAction() {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChartsViewController") as! ChartsViewController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
+    // MARK: Chatto Setup
     
     var chatInputPresenter: BasicChatInputBarPresenter!
     

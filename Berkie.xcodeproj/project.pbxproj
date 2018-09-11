@@ -30,6 +30,7 @@
 		77103441214824F000C88FE1 /* SendingStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710343E214824EF00C88FE1 /* SendingStatusCollectionViewCell.swift */; };
 		77103442214824F000C88FE1 /* SendingStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7710343F214824F000C88FE1 /* SendingStatusCollectionViewCell.xib */; };
 		77103443214824F000C88FE1 /* SendingStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77103440214824F000C88FE1 /* SendingStatusPresenter.swift */; };
+		771034452148547B00C88FE1 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771034442148547B00C88FE1 /* NavigationBarExtension.swift */; };
 		77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */; };
 		77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */; };
 		77365FB12146DF2000BD07EF /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */; };
@@ -94,6 +95,7 @@
 		7710343E214824EF00C88FE1 /* SendingStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		7710343F214824F000C88FE1 /* SendingStatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingStatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		77103440214824F000C88FE1 /* SendingStatusPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusPresenter.swift; sourceTree = "<group>"; };
+		771034442148547B00C88FE1 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTableViewCell.swift; sourceTree = "<group>"; };
 		77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				77E72DDE2141F1BB0045A264 /* AppDelegate.swift */,
 				77414A6E21464E0B00617924 /* Alerts.swift */,
 				77365FB92147335300BD07EF /* ButtonAnimation.swift */,
+				771034442148547B00C88FE1 /* NavigationBarExtension.swift */,
 				77E72DE52141F1BF0045A264 /* Assets.xcassets */,
 			);
 			path = Utilities;
@@ -552,6 +555,7 @@
 				77414A5A2145997200617924 /* Muzzle.swift in Sources */,
 				77414A692145B12A00617924 /* AuthService.swift in Sources */,
 				77103441214824F000C88FE1 /* SendingStatusCollectionViewCell.swift in Sources */,
+				771034452148547B00C88FE1 /* NavigationBarExtension.swift in Sources */,
 				771034202148248800C88FE1 /* BaseMessagesSelector.swift in Sources */,
 				77414A6B2145B5E800617924 /* HomeViewController.swift in Sources */,
 				7710341B2148248800C88FE1 /* MessagesSelectorProtocol.swift in Sources */,

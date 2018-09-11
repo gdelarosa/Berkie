@@ -86,6 +86,22 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         signInButton.layer.cornerRadius = 5
     }
     
+    // MARK: - Hiding the nav bar in the sign up screen
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        // Hide the navigation bar on the this view controller
+//        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3450980392, green: 0.7333333333, blue: 0.7176470588, alpha: 1)
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        // Show the navigation bar on other view controllers
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
+    
     // MARK: - Segue for Transition
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -168,8 +184,13 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
         view.endEditing(true)
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
            
-            let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
-            self.present(controller!, animated: true, completion: nil)
+            //let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+            //self.present(controller!, animated: true, completion: nil)
+            
+            let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let navigationControlr = UINavigationController(rootViewController: homeController)
+            self.present(navigationControlr, animated: true, completion: nil)
+
         }, onError: { error in
           
             self.alert(message: "Please enter a valid email address or password", title: "Invalid Credentials")

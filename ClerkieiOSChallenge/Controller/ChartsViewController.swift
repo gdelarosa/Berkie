@@ -19,10 +19,10 @@ let moneySavedOverMonths = [200.0, 180.0, 310.0, 100.0, 167.0, 180.0, 300.0, 320
 class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var chartsTableView: UITableView!
-    @IBOutlet weak var infoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navBarSetups()
         chartsTableView.alpha = 0
         
     }
@@ -31,11 +31,21 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         presentAnimation()
     }
     
-    @IBAction func infoButtonAction(_ sender: Any) {
-        infoButton.animatedButton(self.infoButton)
-        presentInfoPopup()
+
+    func navBarSetups() {
+        navBarSetup()
+        
+        // Right Bar Button
+        let graphsButton = UIBarButtonItem(image: UIImage(named: "information"), style: .plain, target: self, action: #selector(infoButtonAction))
+        self.navigationItem.rightBarButtonItem  = graphsButton
+        graphsButton.tintColor = UIColor.black
+
     }
     
+    // MARK: - Presents Popup information
+    @objc func infoButtonAction() {
+        presentInfoPopup()
+    }
     
     // MARK: - Animation
     
