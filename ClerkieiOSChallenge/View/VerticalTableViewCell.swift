@@ -46,6 +46,8 @@ class VerticalTableViewCell: UITableViewCell {
         verticalGraph.leftAxis.drawLabelsEnabled = true 
         verticalGraph.data = chartData
         
+        verticalGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        
         verticalView.addSubview(verticalGraph)
     }
 

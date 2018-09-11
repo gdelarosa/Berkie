@@ -45,6 +45,7 @@ class HorizontalTableViewCell: UITableViewCell {
         horizontalGraph.rightAxis.drawGridLinesEnabled = false
         horizontalGraph.leftAxis.drawLabelsEnabled = true
         horizontalGraph.data = chartData
+        horizontalGraph.animate(xAxisDuration: 2.5, yAxisDuration: 2.5)
         
         horizontalView.addSubview(horizontalGraph)
     }

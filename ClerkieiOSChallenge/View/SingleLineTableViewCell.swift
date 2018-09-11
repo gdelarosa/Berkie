@@ -43,6 +43,7 @@ class SingleLineTableViewCell: UITableViewCell {
         singleLineGraph.leftAxis.drawGridLinesEnabled = false
         singleLineGraph.leftAxis.drawLabelsEnabled = true 
         singleLineGraph.data = chartData
+        singleLineGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         
         singleLineView.addSubview(singleLineGraph)
     }

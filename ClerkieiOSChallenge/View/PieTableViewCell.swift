@@ -44,8 +44,8 @@ class PieTableViewCell: UITableViewCell {
         pieGraph.legend.enabled = false
         pieGraph.frame = CGRect(x: 0, y: 0, width: pieView.bounds.width, height: pieView.bounds.height)
         pieGraph.entryLabelFont = UIFont.systemFont(ofSize: 6.0)
-        
         pieGraph.data = chartData
+        pieGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         
         pieView.addSubview(pieGraph)
     }

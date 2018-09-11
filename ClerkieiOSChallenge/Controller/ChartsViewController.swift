@@ -13,7 +13,7 @@ import PopupDialog
 
 // MARK: - Charts Data Set
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-let moneySavedOverMonths = [200.0, 180.0, 600.0, 100.0, 167.0, 180.0, 300.0, 320.0, 185.0, 260.0, 140.0, 70.0]
+let moneySavedOverMonths = [200.0, 180.0, 310.0, 100.0, 167.0, 180.0, 300.0, 320.0, 185.0, 260.0, 140.0, 70.0]
 
 class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

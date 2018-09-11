@@ -52,6 +52,7 @@ class DuoLineTableViewCell: UITableViewCell {
         duoLineGraph.leftAxis.drawGridLinesEnabled = false
         duoLineGraph.leftAxis.drawLabelsEnabled = true 
         duoLineGraph.data = chartData
+        duoLineGraph.animate(xAxisDuration: 2.5, yAxisDuration: 2.5)
         
         duoLineView.addSubview(duoLineGraph)
     }
