@@ -99,12 +99,11 @@ class HomeViewController: BaseChatViewController {
             self?.dataSource.addTextMessage(text, isIncoming: false)
             self?.currtxt = text
             
-            //General
+    
             if(self?.currtxt.lowercased() == "fine"){
                 DemoChatMessageFactory.messageIndex = 2
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[2], isIncoming: true)
             }
-            //Greetings
             else if(self?.currtxt.lowercased() == "hi") {
                 DemoChatMessageFactory.messageIndex = 1
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[1], isIncoming: true)
@@ -113,10 +112,13 @@ class HomeViewController: BaseChatViewController {
                 DemoChatMessageFactory.messageIndex = 1
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[1], isIncoming: true)
             }
-            //
             else if(self?.currtxt.lowercased() == "no") {
-                DemoChatMessageFactory.messageIndex = 0
-                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[0], isIncoming: true)
+                DemoChatMessageFactory.messageIndex = 4
+                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[4], isIncoming: true)
+            }
+            else if(self?.currtxt.lowercased() == "yes") {
+                DemoChatMessageFactory.messageIndex = 3
+                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[3], isIncoming: true)
             }
             else if(self?.currtxt.lowercased() == "ok") {
                 DemoChatMessageFactory.messageIndex = 0

@@ -60,12 +60,13 @@ class DemoChatMessageFactory {
     
      static let demoText =
         [
-            "How do you feel about your finances at this moment?.", //0
+            "Have a great day!.", //0
             "Hi! 👋", //1 GREETING
             "Thanks for sharing! Well I'm here to make your life easier. Are you interested?", //2
-            //Yes or No
+            //Yes
             "Great! There are many benefits with being mindful of one's finances.", // 3
-            "Based off my calculations, it appears that you're finances are looking healthy 💯. Remeber, if you have any questions don't hesitate to ask!" // 4
+            "Sorry to hear that. 😔 I'm always here to help when you're ready.", //4
+            "Based off my calculations, it appears that you're finances are looking healthy 💯. Remeber, if you have any questions don't hesitate to ask!" // 5
     ]
     
     class func makeChatItem(uid: String) -> MessageModelProtocol {
@@ -80,6 +81,12 @@ class DemoChatMessageFactory {
         let text = self.demoText[messageIndex]
         return makeTextMessage("3-\(index)", text: text, isIncoming: isIncoming)
     }
+    
+//    class func makePhotoMessage(_ uid: String, image: UIImage, size: CGSize, isIncoming: Bool) -> DemoPhotoMessageModel {
+//        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: PhotoMessageModel<MessageModel>.chatItemType)
+//        let photoMessageModel = DemoPhotoMessageModel(messageModel: messageModel, imageSize: size, image: image)
+//        return photoMessageModel
+//    }
 }
 
 extension TextMessageModel {
