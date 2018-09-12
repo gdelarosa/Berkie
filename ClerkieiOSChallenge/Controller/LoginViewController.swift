@@ -17,6 +17,7 @@ import UIKit
 import Firebase
 import BubbleTransition
 
+// MARK: - Initial LoginCritter Setup
 private let buttonFrame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
 private let buttonHeight = textFieldHeight
 private let buttonHorizontalMargin = textFieldHorizontalMargin / 2
@@ -41,7 +42,8 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     let transition = BubbleTransition()
-   
+    
+    // MARK: - LoginCritter
     private let critterView = CritterView(frame: critterViewFrame)
 
     private lazy var emailTextField: UITextField = {
@@ -76,7 +78,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     deinit {
         notificationCenter.removeObserver(self)
     }
-
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -98,7 +100,6 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     }
     
     // MARK: UIViewControllerTransitioningDelegate
-    
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = signUpButton.center
@@ -191,7 +192,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
             })
     }
     
-    // MARK: -
+    // MARK: - Login Critter Setup
     
     // MARK: - Private
 

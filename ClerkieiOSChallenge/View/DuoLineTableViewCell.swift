@@ -15,7 +15,6 @@ class DuoLineTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     let moneySavedYearTwo = [280.0, 100.0, 500.0, 170.0, 108.0, 100.0, 600.0, 300.0, 150.0, 200.0, 200.0, 90.0]

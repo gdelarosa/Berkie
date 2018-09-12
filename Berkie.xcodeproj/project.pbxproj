@@ -68,7 +68,6 @@
 		77E72DE42141F1BB0045A264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE22141F1BB0045A264 /* Main.storyboard */; };
 		77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE52141F1BF0045A264 /* Assets.xcassets */; };
 		77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */; };
-		77E72DF12141F1EA0045A264 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,7 +135,6 @@
 		77E72DE52141F1BF0045A264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E72DE82141F1BF0045A264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E72DEA2141F1BF0045A264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ClerkieiOSChallenge/Info.plist; sourceTree = "<group>"; };
-		77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ClerkieiOSChallenge/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,12 +325,12 @@
 		77414A6421459AD600617924 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7710344621486C7D00C88FE1 /* SideButtonView.swift */,
 				77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */,
 				77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */,
 				77365FB22146DF2C00BD07EF /* SingleLineTableViewCell.swift */,
 				77365FB42146DF3A00BD07EF /* DuoLineTableViewCell.swift */,
 				77365FB62146DF4500BD07EF /* PieTableViewCell.swift */,
+				7710344621486C7D00C88FE1 /* SideButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,7 +360,6 @@
 			children = (
 				77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */,
 				77E72DEA2141F1BF0045A264 /* Info.plist */,
-				77E72DF02141F1EA0045A264 /* GoogleService-Info.plist */,
 				77E72DDC2141F1BB0045A264 /* Products */,
 				CEC0C7FD4037A83CFA9DE472 /* Pods */,
 				70E47EB3DB88D9E632B2159A /* Frameworks */,
@@ -462,7 +459,6 @@
 			files = (
 				77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */,
 				77103442214824F000C88FE1 /* SendingStatusCollectionViewCell.xib in Resources */,
-				77E72DF12141F1EA0045A264 /* GoogleService-Info.plist in Resources */,
 				77E72DE62141F1BF0045A264 /* Assets.xcassets in Resources */,
 				77E72DE42141F1BB0045A264 /* Main.storyboard in Resources */,
 			);
