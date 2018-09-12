@@ -24,7 +24,6 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         navBarSetups()
         chartsTableView.alpha = 0
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +63,7 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let image = UIImage.gifImageWithURL(gifURL)
         let popup = PopupDialog(title: title, message: message, image: image)
     
-        let buttonOne = CancelButton(title: "GREAT!") {
+        let buttonOne = CancelButton(title: "GREAT") {
             print("Closed popup.")
         }
    

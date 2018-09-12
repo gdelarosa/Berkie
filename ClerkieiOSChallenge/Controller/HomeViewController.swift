@@ -11,6 +11,7 @@ import Chatto
 import ChattoAdditions
 import RHSideButtons
 import PopupDialog
+import Photos
 
 class HomeViewController: BaseChatViewController {
     
@@ -40,7 +41,7 @@ class HomeViewController: BaseChatViewController {
         
         self.messageSender = self.dataSource.messageSender
         self.chatDataSource = self.dataSource
-        self.dataSource.addIntroMessage("Hello! Welcome to Berkie, the app for your financial success and well being. How do you feel about your finances at this moment?")
+        self.dataSource.addIntroMessage("Hello! Welcome to Berkie, the app for your financial success and well being. How do you feel about your finances at this moment? Please enter: [Great, Meh, or Bad]")
     }
     
     // MARK: - Setup for side menu
@@ -168,7 +169,15 @@ class HomeViewController: BaseChatViewController {
             self?.currtxt = text
             
     
-            if(self?.currtxt.lowercased() == "fine"){
+            if(self?.currtxt.lowercased() == "great"){
+                DemoChatMessageFactory.messageIndex = 2
+                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[2], isIncoming: true)
+            }
+            else if(self?.currtxt.lowercased() == "meh") {
+                DemoChatMessageFactory.messageIndex = 2
+                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[2], isIncoming: true)
+            }
+            else if(self?.currtxt.lowercased() == "bad") {
                 DemoChatMessageFactory.messageIndex = 2
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[2], isIncoming: true)
             }
@@ -187,9 +196,11 @@ class HomeViewController: BaseChatViewController {
             else if(self?.currtxt.lowercased() == "yes") {
                 DemoChatMessageFactory.messageIndex = 3
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[3], isIncoming: true)
+                self?.dataSource.addPhotoMessage(#imageLiteral(resourceName: "balance"))
+                self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[7], isIncoming: true)
             }
             else if(self?.currtxt.lowercased() == "ok") {
-                DemoChatMessageFactory.messageIndex = 0
+                DemoChatMessageFactory.messageIndex = 6
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[0], isIncoming: true)
             }
             else{
@@ -227,20 +238,27 @@ extension HomeViewController: RHSideButtonsDelegate {
     
     func sideButtons(_ sideButtons: RHSideButtons, didSelectButtonAtIndex index: Int) {
         
-        let title = "Your Money Your Rules"
-        let message = "We can help with transferring money, depositing checks, and borrowing money. Right now our settings indicate you do not have of these features setup. Please visit the settings within the app to get started."
-        let gifURL : String = "https://media.giphy.com/media/uFtywzELtkFzi/giphy.gif"
-        let image = UIImage.gifImageWithURL(gifURL)
-        let popup = PopupDialog(title: title, message: message, image: image)
-        
-        let buttonOne = CancelButton(title: "Sounds Great!") {
-            print("Closed popup.")
+        if index == 0 || index == 1 || index == 2 {
+            let title = "Your Money Your Rules"
+            let message = "We can help with transferring money, depositing checks, and borrowing money. Right now our settings indicate you do not have of these features setup. Please visit the settings within the app to get started."
+            let gifURL : String = "https://media.giphy.com/media/uFtywzELtkFzi/giphy.gif"
+            let image = UIImage.gifImageWithURL(gifURL)
+            let popup = PopupDialog(title: title, message: message, image: image)
+            
+            let buttonOne = CancelButton(title: "Sounds Great!") {
+                print("Closed popup.")
+            }
+            popup.addButtons([buttonOne])
+            self.present(popup, animated: true, completion: nil)
         }
         
-        popup.addButtons([buttonOne])
-        
-        self.present(popup, animated: true, completion: nil)
-        print("Button index tapped: \(index)")
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     
     func sideButtons(_ sideButtons: RHSideButtons, didTriggerButtonChangeStateTo state: RHButtonState) {

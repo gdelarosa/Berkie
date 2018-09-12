@@ -95,7 +95,7 @@ class DemoChatDataSource: ChatDataSourceProtocol {
     func addPhotoMessage(_ image: UIImage) {
         let uid = "\(self.nextMessageId)"
         self.nextMessageId += 1
-        let message = makePhotoMessage(uid, image: image, size: image.size, isIncoming: false)
+        let message = makePhotoMessage(uid, image: image, size: image.size, isIncoming: true)
         self.messageSender.sendMessage(message)
         self.slidingWindow.insertItem(message, position: .bottom)
         self.delegate?.chatDataSourceDidUpdate(self)

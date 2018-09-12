@@ -60,13 +60,17 @@ class DemoChatMessageFactory {
     
      static let demoText =
         [
-            "Have a great day!.", //0
+            "Apologies. I am not smart enough yet to understand what you sent. Please try something else.", //0
             "Hi! 👋", //1 GREETING
             "Thanks for sharing! Well I'm here to make your life easier. Are you interested?", //2
             //Yes
-            "Great! There are many benefits with being mindful of one's finances.", // 3
+            "Awesome! 💰 There are many benefits with being mindful 🤓 of one's finances.", // 3
+            //No
             "Sorry to hear that. 😔 I'm always here to help when you're ready.", //4
-            "Based off my calculations, it appears that you're finances are looking healthy 💯. Remeber, if you have any questions don't hesitate to ask!" // 5
+            "Based off my calculations, it appears that you're finances are looking healthy 💯. Remeber, if you have any questions don't hesitate to ask!", // 5
+            "Let's talk getting financially healthy and happy sometime. 💰", //6
+            "For the most part, I can answer questions on topics such as savings, 401k, taxes, and budgeting."//7
+            
     ]
     
     class func makeChatItem(uid: String) -> MessageModelProtocol {
