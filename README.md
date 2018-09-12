@@ -15,7 +15,7 @@ Berkie is a simple iOS application that demos a basic login & sign up flow, chat
 
 ### Installing
 
-In order to test out this app, you can login using the following credentials: noreply@apple.com / 123456, create an account, or download your own GoogleService-Info.plist file from your Firebase account. 
+In order to test out this app you must download your own GoogleService-Info.plist file from your Firebase account. 
 
 ## Acknowledgments
 
