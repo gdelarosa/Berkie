@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSf-ek-b5t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -51,7 +51,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QN-3D-VVX">
                                 <rect key="frame" x="302" y="257" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,10 +151,13 @@
                                     <constraint firstItem="OC0-rv-D6V" firstAttribute="centerX" secondItem="M5i-Y9-VYc" secondAttribute="centerX" id="wcC-TR-Ce2"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0R-5A-gte">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0R-5A-gte">
                                 <rect key="frame" x="324" y="61" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="7jb-E9-dRg"/>
+                                    <constraint firstAttribute="height" constant="36" id="KlE-3c-UJu"/>
+                                </constraints>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -163,11 +166,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="leading" secondItem="Tny-ZD-v9g" secondAttribute="leading" id="798-vq-uqk"/>
                             <constraint firstItem="j02-HM-Van" firstAttribute="bottom" secondItem="Tny-ZD-v9g" secondAttribute="bottom" id="7jV-xc-uOu"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="trailing" secondItem="Tny-ZD-v9g" secondAttribute="trailing" id="BvJ-bA-R38"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="bottom" secondItem="Tny-ZD-v9g" secondAttribute="bottom" id="JYo-hf-7pv"/>
+                            <constraint firstItem="j02-HM-Van" firstAttribute="top" secondItem="Bp1-Xs-BE7" secondAttribute="top" id="MuS-d6-BwO"/>
+                            <constraint firstItem="Tny-ZD-v9g" firstAttribute="trailing" secondItem="B0R-5A-gte" secondAttribute="trailing" constant="15" id="TDs-Ez-uxK"/>
                             <constraint firstItem="j02-HM-Van" firstAttribute="trailing" secondItem="Tny-ZD-v9g" secondAttribute="trailing" id="jkO-TM-GJu"/>
                             <constraint firstItem="j02-HM-Van" firstAttribute="leading" secondItem="Tny-ZD-v9g" secondAttribute="leading" id="mPw-fA-2h5"/>
+                            <constraint firstItem="B0R-5A-gte" firstAttribute="top" secondItem="Tny-ZD-v9g" secondAttribute="top" constant="41" id="p4O-2w-kki"/>
                             <constraint firstItem="j02-HM-Van" firstAttribute="top" secondItem="Bp1-Xs-BE7" secondAttribute="top" id="tn0-BF-6Qq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tny-ZD-v9g"/>

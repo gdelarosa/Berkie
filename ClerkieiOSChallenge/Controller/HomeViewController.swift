@@ -12,6 +12,7 @@ import ChattoAdditions
 import RHSideButtons
 import PopupDialog
 import Photos
+import MobileCoreServices
 
 class HomeViewController: BaseChatViewController {
     
@@ -26,14 +27,10 @@ class HomeViewController: BaseChatViewController {
         return BaseMessageHandler(messageSender: self.messageSender, messagesSelector: self.messagesSelector)
     }()
     
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarSetups()
-        setupSideMenu() //testing for button
+        setupSideMenu()
         self.view.backgroundColor = .white
       
         self.messagesSelector.delegate = self as MessagesSelectorDelegate
@@ -155,10 +152,12 @@ class HomeViewController: BaseChatViewController {
     private func createPhotoInputItem() -> PhotosChatInputItem {
         let item = PhotosChatInputItem(presentingController: self)
         item.photoInputHandler = { [weak self] image in
+            
             self?.dataSource.addPhotoMessage(image)
         }
         return item
     }
+    
     
     // MARK: - Chat
     private func createTextInputItem() -> TextChatInputItem {
@@ -196,7 +195,6 @@ class HomeViewController: BaseChatViewController {
             else if(self?.currtxt.lowercased() == "yes") {
                 DemoChatMessageFactory.messageIndex = 3
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[3], isIncoming: true)
-                self?.dataSource.addPhotoMessage(#imageLiteral(resourceName: "balance"))
                 self?.dataSource.addTextMessage(DemoChatMessageFactory.demoText[7], isIncoming: true)
             }
             else if(self?.currtxt.lowercased() == "ok") {
@@ -255,7 +253,8 @@ extension HomeViewController: RHSideButtonsDelegate {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            imagePicker.sourceType = .photoLibrary;
+            imagePicker.mediaTypes = ["public.image", "public.movie"]
+            imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }

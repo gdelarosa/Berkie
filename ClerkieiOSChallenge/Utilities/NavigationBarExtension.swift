@@ -18,7 +18,7 @@ extension UIViewController {
         // Centers image on navigation bar.
         let imageView = UIImageView(image: UIImage(named: "Loading_Landscape"))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         imageView.frame = titleView.bounds
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView

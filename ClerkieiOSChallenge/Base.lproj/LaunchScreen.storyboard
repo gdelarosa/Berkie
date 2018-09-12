@@ -40,8 +40,10 @@
                             <constraint firstItem="VZZ-P4-yCD" firstAttribute="centerX" secondItem="jGf-ys-EiX" secondAttribute="centerX" id="LVa-v5-UjG"/>
                             <constraint firstItem="VZZ-P4-yCD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VKw-bM-zTB"/>
                             <constraint firstItem="VZZ-P4-yCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="bAQ-fb-g7i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZZ-P4-yCD" secondAttribute="trailing" constant="125" id="dU8-aZ-NwK"/>
                             <constraint firstItem="Diy-Zb-OrB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iqu-OU-mOa"/>
                             <constraint firstItem="Diy-Zb-OrB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="jW1-nf-kMs"/>
+                            <constraint firstItem="VZZ-P4-yCD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="nkV-fB-lcM"/>
                             <constraint firstItem="jGf-ys-EiX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="r5l-F4-9gh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Diy-Zb-OrB" secondAttribute="bottom" constant="41" id="rPw-7B-Pbb"/>
                             <constraint firstItem="jGf-ys-EiX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tN9-rH-JSU"/>
