@@ -12,12 +12,14 @@ import Charts
 class SingleLineTableViewCell: UITableViewCell {
 
     @IBOutlet weak var singleLineView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     func createChart() {
+        
         //Data point setup
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<months.count {
@@ -26,7 +28,7 @@ class SingleLineTableViewCell: UITableViewCell {
         }
         
         //Configure settings for the line
-        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Money Spent")
+        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Budget Goals")
         chartDataSet.colors = [UIColor(red: 137/255, green: 4/255, blue: 61/255, alpha: 1)]
         chartDataSet.circleRadius = 2.0
         chartDataSet.circleColors = [UIColor.gray]

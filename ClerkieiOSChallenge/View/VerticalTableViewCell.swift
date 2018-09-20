@@ -28,10 +28,10 @@ class VerticalTableViewCell: UITableViewCell {
         }
         
         //Configure settings for the bar
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Money Earned")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Money Spent")
        
-        chartDataSet.colors = [UIColor(red: 219/255, green: 80/255, blue: 74/255, alpha: 1),
-                               UIColor(red: 255/255, green: 111/255, blue: 89/255, alpha: 1)]
+        chartDataSet.colors = [UIColor(red: 219/255, green: 80/255, blue: 74/255, alpha: 1)]
+        
         let chartData = BarChartData(dataSet: chartDataSet)
         
         //Axis setup
@@ -43,7 +43,7 @@ class VerticalTableViewCell: UITableViewCell {
         verticalGraph.rightAxis.enabled = false
         verticalGraph.xAxis.drawGridLinesEnabled = false
         verticalGraph.leftAxis.drawGridLinesEnabled = false
-        verticalGraph.leftAxis.drawLabelsEnabled = true 
+        verticalGraph.leftAxis.drawLabelsEnabled = true
         verticalGraph.data = chartData
         
         verticalGraph.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)

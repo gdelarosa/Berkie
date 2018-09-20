@@ -27,25 +27,20 @@ class HorizontalTableViewCell: UITableViewCell {
         }
         
         //Configure
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "")
-        chartDataSet.colors = [UIColor(red: 37/255, green: 68/255, blue: 65/255, alpha: 1), UIColor(red: 67/255, green: 170/255, blue: 139/255, alpha: 1)]
-        chartDataSet.drawValuesEnabled = true
-        chartDataSet.valueTextColor = UIColor.black
-        chartDataSet.drawIconsEnabled = true
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Money Saved")
+        chartDataSet.colors = [UIColor(red: 37/255, green: 68/255, blue: 65/255, alpha: 1)]
+      
         let chartData = BarChartData(dataSet: chartDataSet)
         
         //Axis setup
         let horizontalGraph = HorizontalBarChartView()
         horizontalGraph.frame = CGRect(x: 0, y: 0, width: horizontalView.bounds.width, height: horizontalView.bounds.height)
         horizontalGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
-        horizontalGraph.xAxis.labelPosition = .bottom
-        horizontalGraph.chartDescription?.text = "Money Earned"
-        horizontalGraph.leftAxis.enabled = true
-        horizontalGraph.xAxis.drawGridLinesEnabled = false
-        horizontalGraph.rightAxis.drawGridLinesEnabled = false
-        horizontalGraph.leftAxis.drawLabelsEnabled = true
+      
+        horizontalGraph.chartDescription?.text = ""
         horizontalGraph.data = chartData
         horizontalGraph.animate(xAxisDuration: 2.5, yAxisDuration: 2.5)
+        horizontalGraph.extraBottomOffset = 30
         
         horizontalView.addSubview(horizontalGraph)
     }

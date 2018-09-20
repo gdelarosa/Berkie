@@ -20,8 +20,12 @@ class DuoLineTableViewCell: UITableViewCell {
     let moneySavedYearTwo = [280.0, 100.0, 500.0, 170.0, 108.0, 100.0, 600.0, 300.0, 150.0, 200.0, 200.0, 90.0]
     
     func createChart() {
+        
+       
+        
         var dataEntries: [ChartDataEntry] = []
         var dataEntries1: [ChartDataEntry] = []
+        
         for i in 0..<months.count {
             let dataEntry = ChartDataEntry.init(x: Double(i), y: moneySavedOverMonths[i])
             dataEntries.append(dataEntry)
@@ -30,8 +34,8 @@ class DuoLineTableViewCell: UITableViewCell {
         }
         
         //Configure settings for both lines separately
-        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Money Saved First Quarter")
-        let chartDataSet1 = LineChartDataSet.init(values: dataEntries1, label: "Money Saved Second Quarter")
+        let chartDataSet = LineChartDataSet.init(values: dataEntries, label: "Money Saved ")
+        let chartDataSet1 = LineChartDataSet.init(values: dataEntries1, label: "Money Spent")
         chartDataSet.colors = [UIColor(red: 47/255, green: 230/255, blue: 222/255, alpha: 1)]
         chartDataSet1.colors = [UIColor(red: 28/255, green: 48/255, blue: 65/255, alpha: 1)]
         chartDataSet.circleRadius = 2.0
@@ -52,7 +56,7 @@ class DuoLineTableViewCell: UITableViewCell {
         duoLineGraph.leftAxis.drawGridLinesEnabled = false
         duoLineGraph.leftAxis.drawLabelsEnabled = true 
         duoLineGraph.data = chartData
-        duoLineGraph.animate(xAxisDuration: 0.5, yAxisDuration: 0.5)
+        duoLineGraph.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         
         duoLineView.addSubview(duoLineGraph)
     }
