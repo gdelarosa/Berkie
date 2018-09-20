@@ -34,6 +34,8 @@
 		7710344721486C7D00C88FE1 /* SideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710344621486C7D00C88FE1 /* SideButtonView.swift */; };
 		7710344B2148BB4700C88FE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7710344A2148BB4700C88FE1 /* GoogleService-Info.plist */; };
 		77222CF4215427C300573E49 /* Subclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77222CF3215427C300573E49 /* Subclass.swift */; };
+		77222CFE215434AE00573E49 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77222CFB2154346000573E49 /* Charts.framework */; };
+		77222CFF215434AE00573E49 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77222CFB2154346000573E49 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */; };
 		77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */; };
 		77365FB12146DF2000BD07EF /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */; };
@@ -72,6 +74,44 @@
 		77E72DE92141F1BF0045A264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E72DE72141F1BF0045A264 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		77222CFA2154346000573E49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77222CF52154346000573E49 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		77222CFC2154346000573E49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77222CF52154346000573E49 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		77222D00215434AE00573E49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77222CF52154346000573E49 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77222D02215434AE00573E49 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				77222CFF215434AE00573E49 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2CE159CB687D05D6B72AECD7 /* Pods_Berkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkie/Pods-Berkie.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +141,7 @@
 		7710344621486C7D00C88FE1 /* SideButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonView.swift; sourceTree = "<group>"; };
 		7710344A2148BB4700C88FE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77222CF3215427C300573E49 /* Subclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subclass.swift; sourceTree = "<group>"; };
+		77222CF52154346000573E49 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-3.1.1/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTableViewCell.swift; sourceTree = "<group>"; };
 		77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64CECA4F2C4D5D5BEB18D97C /* Pods_Berkie.framework in Frameworks */,
+				77222CFE215434AE00573E49 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +296,15 @@
 				77103440214824F000C88FE1 /* SendingStatusPresenter.swift */,
 			);
 			path = "Sending Status";
+			sourceTree = "<group>";
+		};
+		77222CF62154346000573E49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77222CFB2154346000573E49 /* Charts.framework */,
+				77222CFD2154346000573E49 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		77365FB82146DFDE00BD07EF /* Helpers */ = {
@@ -383,6 +434,7 @@
 		77E72DDD2141F1BB0045A264 /* ClerkieiOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				77222CF52154346000573E49 /* Charts.xcodeproj */,
 				77414A6321459ACD00617924 /* Controller */,
 				77414A6421459AD600617924 /* View */,
 				77414A672145B11400617924 /* Services */,
@@ -415,10 +467,12 @@
 				77E72DD82141F1BB0045A264 /* Frameworks */,
 				77E72DD92141F1BB0045A264 /* Resources */,
 				BA8B6B3559524BFB3A23AFFB /* [CP] Embed Pods Frameworks */,
+				77222D02215434AE00573E49 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				77222D01215434AE00573E49 /* PBXTargetDependency */,
 			);
 			name = Berkie;
 			productName = ClerkieiOSChallenge;
@@ -451,12 +505,35 @@
 			mainGroup = 77E72DD22141F1BB0045A264;
 			productRefGroup = 77E72DDC2141F1BB0045A264 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 77222CF62154346000573E49 /* Products */;
+					ProjectRef = 77222CF52154346000573E49 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				77E72DDA2141F1BB0045A264 /* Berkie */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		77222CFB2154346000573E49 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 77222CFA2154346000573E49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77222CFD2154346000573E49 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 77222CFC2154346000573E49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		77E72DD92141F1BB0045A264 /* Resources */ = {
@@ -500,15 +577,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Berkie/Pods-Berkie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
 				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/RHSideButtons/RHSideButtons.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -516,15 +593,15 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RHSideButtons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -602,6 +679,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77222D01215434AE00573E49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 77222D00215434AE00573E49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		77E72DE22141F1BB0045A264 /* Main.storyboard */ = {
@@ -741,6 +826,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF362473AE9F6CBE3A3A9B5A /* Pods-Berkie.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
@@ -760,6 +846,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D89686827481E851F6A5FBD /* Pods-Berkie.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
