@@ -18,6 +18,10 @@ import Firebase
 import BubbleTransition
 
 // MARK: - Initial LoginCritter Setup
+// NOTES:
+// Private Let - Accessible constant within the file
+// LET - constant that is a reference. Never changes
+// VAR - reference that can change
 private let buttonFrame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
 private let buttonHeight = textFieldHeight
 private let buttonHorizontalMargin = textFieldHorizontalMargin / 2
@@ -35,6 +39,9 @@ private let textFieldSpacing: CGFloat = 22
 private let textFieldTopMargin: CGFloat = 38.8
 private let textFieldWidth: CGFloat = 206
 
+// Final Class - A class modifier, prevented from being overwridden or inheritted
+//
+
 final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var signInButton: UIButton!
@@ -44,6 +51,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     let transition = BubbleTransition()
     
     // MARK: - LoginCritter
+    // Private Lazy Var - Helps saves processing time.
     private let critterView = CritterView(frame: critterViewFrame)
 
     private lazy var emailTextField: UITextField = {
@@ -167,10 +175,8 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     
     @IBAction func signIn(_ sender: Any) {
         view.endEditing(true)
+        
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
-           
-            //let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
-            //self.present(controller!, animated: true, completion: nil)
             
             let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             let navigationControlr = UINavigationController(rootViewController: homeController)

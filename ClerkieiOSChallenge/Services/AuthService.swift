@@ -22,7 +22,7 @@ class AuthService {
             onSuccess()
         })
     }
-    
+    //Static funcs can't be overridden by a subclass
     static func signUp(email: String, password: String, onSuccess: @escaping () -> Void, onError:  @escaping (_ errorMessage: String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
             if error != nil {
@@ -33,7 +33,7 @@ class AuthService {
         })
         
     }
-
+    // @escaping is used because its a closure that will execute after the function is performed. 
     static func resetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (_ errorMessage: String?) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
             if error != nil {
