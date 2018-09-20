@@ -167,17 +167,17 @@ final class LoginViewController: UIViewController, UITextFieldDelegate, UIViewCo
     
     // MARK: - Sign In / Forgot Password
     
-    @IBAction func signIn(_ sender: Any) {
+    @IBAction func signIn(_ sender: UIButton) {
         view.endEditing(true)
         
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess: {
-            
+            sender.addPulse()
             let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             let navigationControlr = UINavigationController(rootViewController: homeController)
             self.present(navigationControlr, animated: true, completion: nil)
 
         }, onError: { error in
-          
+            sender.errorshake()
             self.alert(message: "Please enter a valid email address or password", title: "Invalid Credentials")
         })
     }

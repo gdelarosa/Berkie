@@ -33,14 +33,15 @@ class SignUpViewController: UIViewController {
     }
     
     
-    @IBAction func signUpAction(_ sender: Any) {
+    @IBAction func signUpAction(_ sender: UIButton) {
         AuthService.signUp(email: emailTextfield.text!, password: passwordTextfield.text!, onSuccess: {
-
+            sender.addPulse()
             let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             let navigationControlr = UINavigationController(rootViewController: homeController)
             self.present(navigationControlr, animated: true, completion: nil)
             
             }, onError: { (errorString) in
+                sender.errorshake()
                self.alert(message: "Please enter valid email address", title: "Invalid Email")
             })
     }

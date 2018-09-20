@@ -30,7 +30,7 @@ class SideButtonView: UIView {
         super.layoutSubviews()
         
         // Layout Buttons
-        sideButtonsView?.setTriggerButtonPosition(CGPoint(x: bounds.width - 60, y: bounds.height - 140))
+        sideButtonsView?.setTriggerButtonPosition(CGPoint(x: bounds.width - 60, y: bounds.height - 160))
     }
     
     fileprivate func setup() {
