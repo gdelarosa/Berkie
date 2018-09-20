@@ -46,12 +46,13 @@ class DuoLineTableViewCell: UITableViewCell {
         duoLineGraph.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
         duoLineGraph.xAxis.labelPosition = .bottom
         duoLineGraph.chartDescription?.text = ""
+        duoLineGraph.chartDescription?.font = UIFont.systemFont(ofSize: 16.0)
         duoLineGraph.rightAxis.enabled = false
         duoLineGraph.xAxis.drawGridLinesEnabled = false
         duoLineGraph.leftAxis.drawGridLinesEnabled = false
         duoLineGraph.leftAxis.drawLabelsEnabled = true 
         duoLineGraph.data = chartData
-        duoLineGraph.animate(xAxisDuration: 2.5, yAxisDuration: 2.5)
+        duoLineGraph.animate(xAxisDuration: 0.5, yAxisDuration: 0.5)
         
         duoLineView.addSubview(duoLineGraph)
     }

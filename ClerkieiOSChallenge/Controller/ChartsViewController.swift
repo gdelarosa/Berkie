@@ -14,7 +14,7 @@ import PopupDialog
 
 // MARK: - Charts Data Set
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-let moneySavedOverMonths = [200.0, 180.0, 310.0, 100.0, 167.0, 180.0, 300.0, 320.0, 185.0, 260.0, 140.0, 70.0]
+let moneySavedOverMonths = [400.0, 340.0, 360.0, 500.0, 580.0, 600.0, 500.0, 720.0, 500.0, 600.0, 700.0, 800.0]
 
 class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -108,9 +108,7 @@ class ChartsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(250)
+        return 200
     }
-
-  
 
 }

@@ -26,23 +26,6 @@ class SignUpViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
-//    func handleTextField() {
-//        emailTextfield.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
-//        passwordTextfield.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
-//    }
-//    
-//    @objc func textFieldDidChange() {
-//        guard let email = emailTextfield.text, !email.isEmpty,
-//            let password = passwordTextfield.text, !password.isEmpty else {
-//                signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
-//                signUpButton.isEnabled = false
-//                return
-//        }
-//        
-//        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        signUpButton.isEnabled = true
-//    }
 
     @IBAction func closeAction(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
