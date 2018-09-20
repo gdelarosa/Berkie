@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         returnToLogin.layer.masksToBounds = true
         returnToLogin.layer.cornerRadius = returnToLogin.frame.width/2
         returnToLogin.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)

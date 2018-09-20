@@ -65,7 +65,7 @@ class HomeViewController: BaseChatViewController {
         
         let triggerButton = RHTriggerButtonView(pressedImage: UIImage(named: "exit_icon")!) {
             $0.image = UIImage(named: "trigger_img")
-            $0.hasShadow = true
+            $0.hasShadow = false
         }
         
         let sideButtonsView = RHSideButtons(parentView: castView(), triggerButton: triggerButton)
@@ -84,7 +84,7 @@ class HomeViewController: BaseChatViewController {
         
         return RHButtonView {
             $0.image = UIImage(named: imgName)
-            $0.hasShadow = true
+            $0.hasShadow = false
         }
     }
     
