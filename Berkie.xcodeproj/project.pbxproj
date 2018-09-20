@@ -33,6 +33,7 @@
 		771034452148547B00C88FE1 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771034442148547B00C88FE1 /* NavigationBarExtension.swift */; };
 		7710344721486C7D00C88FE1 /* SideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710344621486C7D00C88FE1 /* SideButtonView.swift */; };
 		7710344B2148BB4700C88FE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7710344A2148BB4700C88FE1 /* GoogleService-Info.plist */; };
+		77222CF4215427C300573E49 /* Subclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77222CF3215427C300573E49 /* Subclass.swift */; };
 		77365FAB2146D2DC00BD07EF /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */; };
 		77365FAF2146DF0C00BD07EF /* VerticalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */; };
 		77365FB12146DF2000BD07EF /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */; };
@@ -99,6 +100,7 @@
 		771034442148547B00C88FE1 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		7710344621486C7D00C88FE1 /* SideButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonView.swift; sourceTree = "<group>"; };
 		7710344A2148BB4700C88FE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77222CF3215427C300573E49 /* Subclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subclass.swift; sourceTree = "<group>"; };
 		77365FAA2146D2DC00BD07EF /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		77365FAE2146DF0C00BD07EF /* VerticalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTableViewCell.swift; sourceTree = "<group>"; };
 		77365FB02146DF2000BD07EF /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				77103429214824D200C88FE1 /* BaseMessageCollectionViewCellAvatarStyle.swift */,
 				77103428214824D100C88FE1 /* BaseMessageHandler.swift */,
+				77222CF3215427C300573E49 /* Subclass.swift */,
 			);
 			path = "Base Messages";
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				77414A542145997200617924 /* RightEarMask.swift in Sources */,
 				77414A602145997200617924 /* Body.swift in Sources */,
 				77414A6D214604CE00617924 /* SignUpViewController.swift in Sources */,
+				77222CF4215427C300573E49 /* Subclass.swift in Sources */,
 				7710342F214824DA00C88FE1 /* DemoTextMessageHandler.swift in Sources */,
 				77414A562145997200617924 /* LeftArm.swift in Sources */,
 				77103430214824DA00C88FE1 /* DemoTextMessageModel.swift in Sources */,

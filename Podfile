@@ -3,7 +3,7 @@ platform :ios, '10.0'
 target 'Berkie' do
 use_frameworks!
 
-pod 'IQKeyboardManagerSwift'
+#pod 'IQKeyboardManagerSwift'
 pod 'BubbleTransition', '~> 3.0.0'
 pod 'Charts'
 pod 'ViewAnimator'
