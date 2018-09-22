@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSf-ek-b5t">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -202,10 +202,72 @@
                         <viewLayoutGuide key="safeArea" id="Ab5-SF-Ieo"/>
                     </view>
                     <navigationItem key="navigationItem" id="f8I-db-xPl"/>
+                    <connections>
+                        <outlet property="creditCardViewPopup" destination="Amp-32-aW1" id="wrv-zJ-k6R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LJ-XT-6fU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Amp-32-aW1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="831"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-0d-4jR">
+                            <rect key="frame" x="25" y="318" width="52" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We keep your financial details secure." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-1M-kQh">
+                            <rect key="frame" x="25" y="347" width="245" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-1L-JRp">
+                            <rect key="frame" x="172" y="522" width="30" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                            <state key="normal" title="Exit">
+                                <color key="titleColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="exitFromBlur:" destination="wSf-ek-b5t" eventType="touchUpInside" id="1ju-cE-ScI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-4x-NZv">
+                            <rect key="frame" x="258" y="449" width="76" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                            <state key="normal" title="Delete Card">
+                                <color key="titleColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteCard:" destination="wSf-ek-b5t" eventType="touchUpInside" id="UmX-nP-4vV"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="klo-OV-QaT">
+                            <rect key="frame" x="24" y="385" width="201" height="94"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-pb-0hG">
+                            <rect key="frame" x="234" y="385" width="125" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                            <state key="normal" title="Send Payment">
+                                <color key="titleColor" red="0.34509803919999998" green="0.73333333329999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sendPayment:" destination="wSf-ek-b5t" eventType="touchUpInside" id="uIL-w8-wgl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="WrK-5O-IPJ"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="1714" y="116"/>
+            <point key="canvasLocation" x="1712.8" y="115.27093596059113"/>
         </scene>
         <!--Charts View Controller-->
         <scene sceneID="Ohg-s5-J8a">
@@ -381,5 +443,6 @@
     </scenes>
     <resources>
         <image name="Loading_Landscape" width="213" height="75"/>
+        <image name="card" width="380" height="254"/>
     </resources>
 </document>

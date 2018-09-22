@@ -11,10 +11,12 @@ import Chatto
 import ChattoAdditions
 import RHSideButtons
 import PopupDialog
-import Photos
-import MobileCoreServices
 
 class HomeViewController: BaseChatViewController {
+    
+  
+    @IBOutlet var creditCardViewPopup: UIView!
+   
     
     var currtxt = ""
     var buttonsArray = [RHButtonView]()
@@ -31,7 +33,10 @@ class HomeViewController: BaseChatViewController {
         super.viewDidLoad()
         navBarSetups()
         setupSideMenu()
+        
         self.view.backgroundColor = .white
+
+        creditCardViewPopup.layer.cornerRadius = 5
       
         self.messagesSelector.delegate = self as MessagesSelectorDelegate
         self.chatItemsDecorator = DemoChatItemsDecorator(messagesSelector: self.messagesSelector)
@@ -40,6 +45,46 @@ class HomeViewController: BaseChatViewController {
         self.chatDataSource = self.dataSource
         self.dataSource.addIntroMessage("Hello! Welcome to Berkie, the app for your financial success and well being. How do you feel about your finances at this moment? Please enter: [Great, Meh, or Bad]")
     }
+    
+    // MARK: - Setup for Popup
+    
+    func blurIn() {
+      
+        self.view.addSubview(creditCardViewPopup)
+       
+        creditCardViewPopup.center = self.view.center
+        creditCardViewPopup.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        creditCardViewPopup.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.creditCardViewPopup?.backgroundColor = UIColor(white: 1, alpha: 0.75)
+            self.creditCardViewPopup.alpha = 1
+            self.creditCardViewPopup.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func blurOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.creditCardViewPopup.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.creditCardViewPopup.alpha = 0
+            
+        }) { (success:Bool) in
+            self.creditCardViewPopup.removeFromSuperview()
+        }
+    }
+    
+    @IBAction func exitFromBlur(_ sender: Any) {
+        blurOut()
+    }
+    
+    @IBAction func sendPayment(_ sender: UIButton) {
+        sender.addPulse()
+    }
+    
+    @IBAction func deleteCard(_ sender: UIButton) {
+        sender.errorshake()
+    }
+    
     
     // MARK: - Setup for side menu
     
@@ -72,7 +117,7 @@ class HomeViewController: BaseChatViewController {
         sideButtonsView.delegate = self
         sideButtonsView.dataSource = self
         
-        for index in 1...4 {
+        for index in 1...3 {
             buttonsArray.append(generateButton(withImgName: "icon_\(index)"))
         }
         
@@ -236,7 +281,9 @@ extension HomeViewController: RHSideButtonsDelegate {
     
     func sideButtons(_ sideButtons: RHSideButtons, didSelectButtonAtIndex index: Int) {
         
-        if index == 0 || index == 1 || index == 2 {
+        if index == 0 {
+            blurIn()
+        } else if index == 1 || index == 2 {
             let title = "Your Money Your Rules"
             let message = "We can help with transferring money, depositing checks, and borrowing money. Right now our settings indicate you do not have of these features setup. Please visit the settings within the app to get started."
             let gifURL : String = "https://media.giphy.com/media/uFtywzELtkFzi/giphy.gif"
@@ -248,15 +295,6 @@ extension HomeViewController: RHSideButtonsDelegate {
             }
             popup.addButtons([buttonOne])
             self.present(popup, animated: true, completion: nil)
-        }
-        
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            imagePicker.mediaTypes = ["public.image", "public.movie"]
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
