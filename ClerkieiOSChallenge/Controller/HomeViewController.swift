@@ -15,7 +15,6 @@ import Starscream
 
 class HomeViewController: BaseChatViewController, WebSocketDelegate {
 
-  
     @IBOutlet var creditCardViewPopup: UIView!
     @IBOutlet var cryptoTradeView: UIView!
     @IBOutlet weak var bitcoinTradePrice: UILabel!
@@ -111,7 +110,7 @@ class HomeViewController: BaseChatViewController, WebSocketDelegate {
         creditCardViewPopup.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.creditCardViewPopup?.backgroundColor = UIColor(white: 1, alpha: 0.75)
+            self.creditCardViewPopup?.backgroundColor = UIColor(white: 1, alpha: 0.90)
             self.creditCardViewPopup.alpha = 1
             self.creditCardViewPopup.transform = CGAffineTransform.identity
         }
@@ -146,7 +145,6 @@ class HomeViewController: BaseChatViewController, WebSocketDelegate {
         self.view.addSubview(cryptoTradeView)
         
         cryptoTradeView.center = self.view.center
-        cryptoTradeView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         cryptoTradeView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
