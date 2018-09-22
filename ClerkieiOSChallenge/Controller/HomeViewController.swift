@@ -11,12 +11,14 @@ import Chatto
 import ChattoAdditions
 import RHSideButtons
 import PopupDialog
+import Starscream
 
-class HomeViewController: BaseChatViewController {
-    
+class HomeViewController: BaseChatViewController, WebSocketDelegate {
+
   
     @IBOutlet var creditCardViewPopup: UIView!
-   
+    @IBOutlet var cryptoTradeView: UIView!
+    @IBOutlet weak var bitcoinTradePrice: UILabel!
     
     var currtxt = ""
     var buttonsArray = [RHButtonView]()
@@ -29,14 +31,66 @@ class HomeViewController: BaseChatViewController {
         return BaseMessageHandler(messageSender: self.messageSender, messagesSelector: self.messagesSelector)
     }()
     
+    // MARK: - Web Socket Configuration for Crypto Trade Price
+    
+    var socket: WebSocket!
+    
+    fileprivate func messageReceived(_ price: String) {
+        bitcoinTradePrice.text = price
+    }
+    
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("Websocket is connected")
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        if let disconnectError = error as? WSError {
+            print("websocket is disconnected: \(disconnectError.message)")
+        } else if let error = error {
+            print("websocket is disconnected: \(error.localizedDescription)")
+        } else {
+            print("websocket disconnected")
+        }
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        guard let data = text.data(using: .utf16),
+            let jsonData = try? JSONSerialization.jsonObject(with: data),
+            let jsonDict = jsonData as? [String: Any],
+            let _ = jsonDict["type"] as? String else {
+                return
+        }
+        
+        if let prices = jsonDict["events"] as? [[String:Any]] {
+            for review in prices {
+                if let currentPrice = review["price"] as? String {
+                    messageReceived(currentPrice)
+                }
+            }
+        }
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("Received Data")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarSetups()
         setupSideMenu()
         
+        var request = URLRequest(url: URL(string: "wss://api.gemini.com/v1/marketdata/btcusd")!)
+        request.timeoutInterval = 5
+        socket = WebSocket(request: request)
+        socket.delegate = self
+        socket.connect()
+        
         self.view.backgroundColor = .white
 
         creditCardViewPopup.layer.cornerRadius = 5
+        cryptoTradeView.layer.cornerRadius = 5
       
         self.messagesSelector.delegate = self as MessagesSelectorDelegate
         self.chatItemsDecorator = DemoChatItemsDecorator(messagesSelector: self.messagesSelector)
@@ -83,6 +137,37 @@ class HomeViewController: BaseChatViewController {
     
     @IBAction func deleteCard(_ sender: UIButton) {
         sender.errorshake()
+    }
+    
+    // MARK: - Crypto Stock View
+    
+    func PopIn() {
+        
+        self.view.addSubview(cryptoTradeView)
+        
+        cryptoTradeView.center = self.view.center
+        cryptoTradeView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        cryptoTradeView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.cryptoTradeView.alpha = 1
+            self.cryptoTradeView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func PopOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cryptoTradeView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.cryptoTradeView.alpha = 0
+            
+        }) { (success:Bool) in
+            self.cryptoTradeView.removeFromSuperview()
+        }
+    }
+    
+    @IBAction func exitCrypto(_ sender: Any) {
+        socket.disconnect()
+        PopOut()
     }
     
     
@@ -283,7 +368,7 @@ extension HomeViewController: RHSideButtonsDelegate {
         
         if index == 0 {
             blurIn()
-        } else if index == 1 || index == 2 {
+        } else if index == 2  {
             let title = "Your Money Your Rules"
             let message = "We can help with transferring money, depositing checks, and borrowing money. Right now our settings indicate you do not have of these features setup. Please visit the settings within the app to get started."
             let gifURL : String = "https://media.giphy.com/media/uFtywzELtkFzi/giphy.gif"
@@ -295,6 +380,8 @@ extension HomeViewController: RHSideButtonsDelegate {
             }
             popup.addButtons([buttonOne])
             self.present(popup, animated: true, completion: nil)
+        } else if index == 1 {
+            PopIn()
         }
     }
     
